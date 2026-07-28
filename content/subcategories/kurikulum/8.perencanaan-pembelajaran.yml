@@ -1,0 +1,18 @@
+id: kurikulum-perencanaan-pembelajaran
+slug: perencanaan-pembelajaran
+parentId: kurikulum
+parentSlug: kurikulum
+parentName: Kurikulum Satuan Pendidikan (KSP)
+name: IX. Perencanaan Pembelajaran
+icon: "018-notes.svg"
+description: Perencanaan teknis pembelajaran dari ruang lingkup satuan pendidikan hingga kelas
+items:
+  - id: kpr1
+    title: Rencana pembelajaran untuk ruang lingkup satuan pendidikan
+    description: "Menjelaskan sumber CP, karakteristik mapel, elemen, deskripsi CP, dan peran antar elemen untuk mencapai CP di setiap mapel"
+  - id: kpr2
+    title: Rencana pembelajaran untuk ruang lingkup kelas
+    description: "Menjelaskan cara perumusan Tujuan Pembelajaran (TP) dari CP, penyusunan Alur Tujuan Pembelajaran (ATP), dan perumusan Modul Ajar/RPP"
+  - id: kpr3
+    title: Rencana Asesmen
+    description: "Menjelaskan teknik serta pelaksanaan asesmen formatif dan sumatif, proses analisis hasil, dan pemberian umpan balik"

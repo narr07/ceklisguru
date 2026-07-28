@@ -20,15 +20,19 @@ function toggle() {
 </script>
 
 <template>
-  <li
+  <UCard
+    as="li"
     class="group flex items-start gap-4 p-4 sm:p-5 rounded-2xl border transition-all duration-200 cursor-pointer select-none"
     :class="isChecked
-      ? 'bg-amber-50/80 dark:bg-amber-950/30 border-amber-300 dark:border-amber-700/80'
-      : 'bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 hover:bg-zinc-50/50 dark:hover:bg-zinc-800/40'"
+      ? 'bg-yellow-50/80 border-yellow-300'
+      : 'bg-white border-zinc-200 hover:border-zinc-300 hover:bg-zinc-50/50'"
     :id="`checklist-item-${item.id}`"
     role="checkbox"
     :aria-checked="isChecked"
     tabindex="0"
+    :ui="{
+      body: 'p-0 sm:p-0 flex items-start gap-4 w-full',
+    }"
     @click="toggle"
     @keydown.space.prevent="toggle"
     @keydown.enter.prevent="toggle"
@@ -38,8 +42,8 @@ function toggle() {
       <div
         class="w-6 h-6 rounded-lg border-2 flex items-center justify-center transition-all duration-200"
         :class="isChecked
-          ? 'bg-amber-500 border-amber-500 text-white'
-          : 'border-zinc-300 dark:border-zinc-600 group-hover:border-amber-500 dark:group-hover:border-amber-400'"
+          ? 'bg-yellow-500 border-yellow-500 text-white'
+          : 'border-zinc-300 group-hover:border-yellow-500'"
       >
         <Transition
           enter-active-class="transition-all duration-150"
@@ -66,13 +70,13 @@ function toggle() {
     <!-- Content -->
     <div class="flex-1 min-w-0">
       <p
-        class="font-bold text-zinc-900 dark:text-zinc-100 text-sm sm:text-base leading-snug transition-all duration-200"
+        class="font-bold text-zinc-900 text-sm sm:text-base leading-snug transition-all duration-200"
         :class="isChecked ? 'checklist-title-completed' : ''"
       >
         {{ item.title }}
       </p>
       <p
-        class="mt-1 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed"
+        class="mt-1 text-sm text-zinc-600 leading-relaxed"
         :class="isChecked ? 'opacity-60' : ''"
       >
         {{ item.description }}
@@ -81,12 +85,12 @@ function toggle() {
       <!-- Optional Tip -->
       <div
         v-if="item.tip"
-        class="mt-2.5 flex items-start gap-2.5 text-xs font-medium text-amber-900 dark:text-amber-200 bg-amber-50/80 dark:bg-amber-950/40 p-3 rounded-xl border border-amber-200 dark:border-amber-900/50 leading-relaxed transition-opacity"
+        class="mt-2.5 flex items-start gap-2.5 text-xs font-medium text-yellow-900 bg-yellow-50/80 p-3 rounded-xl border border-yellow-200 leading-relaxed transition-opacity"
         :class="isChecked ? 'opacity-60' : ''"
       >
         <AnimatedIcon icon="💡" size="sm" />
         <span>{{ item.tip }}</span>
       </div>
     </div>
-  </li>
+  </UCard>
 </template>

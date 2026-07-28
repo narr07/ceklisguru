@@ -12,7 +12,7 @@ export default defineContentConfig({
   collections: {
     categories: defineCollection({
       type: 'data',
-      source: 'categories/*.md',
+      source: 'categories/*.yml',
       schema: z.object({
         id: z.string(),
         slug: z.string(),
@@ -25,7 +25,7 @@ export default defineContentConfig({
     }),
     subcategories: defineCollection({
       type: 'data',
-      source: 'subcategories/**/*.md',
+      source: 'subcategories/**/*.yml',
       schema: z.object({
         id: z.string(),
         slug: z.string(),

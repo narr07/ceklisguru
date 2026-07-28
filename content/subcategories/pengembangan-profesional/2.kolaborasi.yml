@@ -1,0 +1,15 @@
+id: pengembangan-profesional-kolaborasi
+slug: kolaborasi
+parentId: pengembangan-profesional
+parentSlug: pengembangan-profesional
+parentName: Pengembangan Profesional
+name: Kolaborasi & Tujuan
+icon: "043-share.svg"
+description: Berkolaborasi dengan rekan guru dan menetapkan tujuan pengembangan profesional yang jelas
+items:
+  - id: pr3
+    title: Berkolaborasi dengan rekan guru (komunitas belajar)
+    description: "Contoh: Bergabung dengan komunitas guru mata pelajaran, lakukan lesson study, atau peer observation sebulan sekali"
+  - id: pr5
+    title: Tetapkan tujuan pengembangan profesional tahunan
+    description: "Contoh: 'Tahun ini saya akan menguasai pembelajaran berbasis proyek dan mengimplementasikannya di 2 kelas'"

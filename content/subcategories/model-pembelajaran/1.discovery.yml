@@ -1,0 +1,18 @@
+id: model-pembelajaran-discovery
+slug: discovery
+parentId: model-pembelajaran
+parentSlug: model-pembelajaran
+parentName: Implementasi Model Pembelajaran
+name: Discovery Learning
+icon: "003-magnifier.svg"
+description: Memfasilitasi siswa menemukan konsep sendiri melalui eksplorasi dan investigasi aktif
+items:
+  - id: m_dl1
+    title: Siapkan masalah atau fenomena yang memancing rasa ingin tahu
+    description: "Contoh: Tampilkan video anomali sains atau data yang bertentangan dengan asumsi siswa untuk memicu eksplorasi"
+  - id: m_dl2
+    title: Beri kesempatan siswa mengeksplorasi dan menemukan konsep sendiri
+    description: "Contoh: Sediakan bahan, alat, atau sumber data dan biarkan siswa bereksperimen dan menarik kesimpulan sendiri"
+  - id: m_dl3
+    title: Fasilitasi konfirmasi dan generalisasi temuan siswa
+    description: "Contoh: Pandu diskusi kelas untuk mengkonfirmasi temuan dan membantu siswa membuat konsep yang lebih umum"

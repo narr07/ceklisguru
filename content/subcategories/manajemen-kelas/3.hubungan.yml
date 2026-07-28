@@ -1,0 +1,15 @@
+id: manajemen-kelas-hubungan
+slug: hubungan
+parentId: manajemen-kelas
+parentSlug: manajemen-kelas
+parentName: Manajemen Kelas
+name: Hubungan & Inklusivitas
+icon: "006-contact us.svg"
+description: Membangun hubungan positif dengan siswa dan mengelola keberagaman secara inklusif dan adil
+items:
+  - id: c6
+    title: Bangun hubungan positif dengan setiap siswa
+    description: "Contoh: Sapa siswa by name setiap pagi, luangkan 2 menit berbicara personal dengan 2-3 siswa setiap hari"
+  - id: c7
+    title: Tangani keberagaman dengan inklusif dan adil
+    description: "Contoh: Pastikan semua siswa mendapat giliran berbicara, duduk, dan mendapat perhatian yang setara"

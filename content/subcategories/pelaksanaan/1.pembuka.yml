@@ -1,0 +1,15 @@
+id: pelaksanaan-pembuka
+slug: pembuka
+parentId: pelaksanaan
+parentSlug: pelaksanaan
+parentName: Pelaksanaan Pembelajaran
+name: Pembuka
+icon: "050-idea bulb.svg"
+description: Membuka pembelajaran dengan apersepsi menarik dan menyampaikan tujuan yang jelas
+items:
+  - id: i1
+    title: Mulai dengan apersepsi yang menarik dan relevan
+    description: "Contoh: Tunjukkan video 2 menit atau ajukan pertanyaan pemantik yang berkaitan dengan pengalaman siswa sehari-hari"
+  - id: i2
+    title: Sampaikan tujuan pembelajaran di awal kegiatan
+    description: "Contoh: Tulis tujuan di papan atau tampilkan di slide: 'Hari ini kita akan belajar... sehingga kalian bisa...'"

@@ -1,0 +1,15 @@
+id: teknologi-literasi
+slug: literasi
+parentId: teknologi
+parentSlug: teknologi
+parentName: Teknologi & Inovasi
+name: Literasi Digital
+icon: "048-globe.svg"
+description: Mengajarkan literasi digital yang bertanggung jawab dan memanfaatkan data untuk personalisasi
+items:
+  - id: t3
+    title: Ajarkan literasi digital dan etika penggunaan teknologi
+    description: "Contoh: Diskusikan sumber yang kredibel, cara mengutip, privasi digital, dan bahaya hoaks atau plagiarisme"
+  - id: t4
+    title: Gunakan data dan analytics untuk personalisasi pembelajaran
+    description: "Contoh: Pantau laporan progres di platform LMS untuk mengidentifikasi siswa yang perlu perhatian lebih"

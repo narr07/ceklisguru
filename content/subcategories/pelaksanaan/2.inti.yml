@@ -1,0 +1,21 @@
+id: pelaksanaan-inti
+slug: inti
+parentId: pelaksanaan
+parentSlug: pelaksanaan
+parentName: Pelaksanaan Pembelajaran
+name: Inti Pembelajaran
+icon: "027-pen tool.svg"
+description: Melaksanakan pembelajaran inti dengan variasi metode, instruksi jelas, dan monitoring aktif
+items:
+  - id: i3
+    title: Gunakan variasi metode untuk menjaga keterlibatan siswa
+    description: "Contoh: Kombinasikan ceramah singkat, diskusi berpasangan, kerja kelompok, dan presentasi dalam satu sesi"
+  - id: i4
+    title: Berikan instruksi yang jelas dan terstruktur
+    description: "Contoh: Gunakan langkah bernomor, demonstrasikan prosedur, dan cek pemahaman dengan bertanya balik ke siswa"
+  - id: i5
+    title: Pantau dan beri umpan balik selama pembelajaran
+    description: "Contoh: Keliling kelas setiap 5-10 menit, beri komentar spesifik bukan hanya 'bagus' atau 'salah'"
+  - id: i6
+    title: Kelola transisi antar aktivitas dengan efisien
+    description: "Contoh: Gunakan sinyal visual/suara untuk berpindah aktivitas, dan beri waktu transisi yang cukup (2-3 menit)"

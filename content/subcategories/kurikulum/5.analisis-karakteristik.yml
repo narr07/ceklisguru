@@ -1,0 +1,27 @@
+id: kurikulum-analisis-karakteristik
+slug: analisis-karakteristik
+parentId: kurikulum
+parentSlug: kurikulum
+parentName: Kurikulum Satuan Pendidikan (KSP)
+name: VI. Analisis Karakteristik Satuan Pendidikan
+icon: "035-folder.svg"
+description: Analisis komprehensif terkait berbagai aspek karakteristik sekolah, peserta didik, dan lingkungan
+items:
+  - id: kak1
+    title: Analisis karakteristik peserta didik
+    description: "Mengidentifikasi profil, kebutuhan, dan latar belakang peserta didik"
+  - id: kak2
+    title: Analisis Guru dan Tenaga Kependidikan
+    description: "Memetakan kompetensi dan kondisi pendidik serta tenaga kependidikan di sekolah"
+  - id: kak3
+    title: Analisis lingkungan satuan pendidikan
+    description: "Memahami kondisi riil sosial dan budaya lingkungan sekitar sekolah"
+  - id: kak4
+    title: Analisis potensi dan kekhasan daerah setempat
+    description: "Mengidentifikasi potensi daerah yang penting untuk diketahui, diberdayakan, atau dilestarikan"
+  - id: kak5
+    title: Analisis keterlibatan orang tua
+    description: "Mengukur sejauh mana dukungan orang tua terhadap perkembangan peserta didik"
+  - id: kak6
+    title: Analisis prestasi/keterlibatan peserta didik
+    description: "Memetakan capaian peserta didik dalam bidang akademik maupun non-akademik"

@@ -4,7 +4,7 @@ import type { Category, SubCategory } from '~/types/checklist'
 useHead({
   title: 'CeklisGuru - Praktik Terbaik Pembelajaran untuk Guru Indonesia',
   meta: [
-    { name: 'description', content: 'Platform checklist interaktif untuk guru Indonesia. 7 kategori dengan sub-topik terstruktur, progress tracking, dan penyimpanan otomatis.' },
+    { name: 'description', content: 'Platform checklist interaktif untuk guru Indonesia. 8 kategori dengan sub-topik terstruktur, progress tracking, dan penyimpanan otomatis.' },
   ],
 })
 
@@ -34,35 +34,39 @@ const subcategoriesByParent = computed(() => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-zinc-50 dark:bg-zinc-950">
+  <div class="min-h-screen bg-white">
     <AppHeader />
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <UContainer class="py-8 sm:py-12">
       <!-- Hero Section -->
       <section class="text-center mb-10 sm:mb-14">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 rounded-full text-xs font-bold text-amber-700 dark:text-amber-300 uppercase tracking-wide mb-5">
-          <span>🇮🇩</span>
-          <span>Platform untuk Guru Indonesia</span>
-        </div>
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-zinc-900 dark:text-zinc-100 mb-3 sm:mb-4 leading-tight">
+        <UBadge
+          color="primary"
+          variant="soft"
+          size="md"
+          class="mb-5 uppercase font-bold tracking-wide rounded-full px-4 py-1.5"
+        >
+          🇮🇩 Platform untuk Guru Indonesia
+        </UBadge>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-zinc-900 mb-3 sm:mb-4 leading-tight">
           Checklist Praktik Terbaik<br class="hidden sm:block">
-          <span class="text-amber-600 dark:text-amber-400">Pembelajaran</span>
+          <span class="text-yellow-600">Pembelajaran</span>
         </h1>
-        <p class="text-zinc-600 dark:text-zinc-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-          Pantau dan tingkatkan kualitas mengajar Anda dengan <strong class="text-zinc-900 dark:text-zinc-200">praktik terbaik</strong> terstruktur dalam {{ categories?.length ?? 0 }} kategori pembelajaran.
+        <p class="text-zinc-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          Pantau dan tingkatkan kualitas mengajar Anda dengan <strong class="text-zinc-900">praktik terbaik</strong> terstruktur dalam {{ categories?.length ?? 0 }} kategori pembelajaran.
         </p>
       </section>
 
       <!-- Category Grid -->
       <section aria-label="Daftar Kategori Pembelajaran">
-        <h2 class="text-lg sm:text-xl font-bold text-zinc-800 dark:text-zinc-200 mb-5 flex items-center gap-2">
-          <span class="w-1.5 h-5 bg-amber-500 rounded-full inline-block" aria-hidden="true" />
+        <h2 class="text-lg sm:text-xl font-bold text-zinc-800 mb-5 flex items-center gap-2">
+          <span class="w-1.5 h-5 bg-yellow-500 rounded-full inline-block" aria-hidden="true" />
           {{ categories?.length ?? 0 }} Kategori Pembelajaran
         </h2>
 
         <div
           v-if="categories?.length"
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-4 sm:gap-5"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5"
         >
           <CategoryCard
             v-for="category in categories"
@@ -74,16 +78,16 @@ const subcategoriesByParent = computed(() => {
 
         <div
           v-else
-          class="text-center py-16 text-zinc-400 dark:text-zinc-600"
+          class="text-center py-16 text-zinc-400"
         >
           <AnimatedIcon icon="📭" size="xl" class="mx-auto mb-3" />
           <p class="font-medium">Kategori belum tersedia</p>
         </div>
       </section>
-    </main>
+    </UContainer>
 
     <!-- Footer -->
-    <footer class="mt-16 border-t border-zinc-200 dark:border-zinc-800 py-8 text-center text-sm text-zinc-400 dark:text-zinc-500">
+    <footer class="mt-16 border-t border-zinc-200 py-8 text-center text-sm text-zinc-400">
       <p>CeklisGuru.id — Dibuat dengan ❤️ untuk Guru Indonesia</p>
     </footer>
   </div>

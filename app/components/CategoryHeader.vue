@@ -40,17 +40,17 @@ function handleReset() {
 </script>
 
 <template>
-  <div class="relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 sm:p-8 mb-6 sm:mb-8">
+  <div class="relative overflow-hidden rounded-2xl border border-zinc-200 bg-white p-6 sm:p-8 mb-6 sm:mb-8 shadow-xs">
     <!-- Background decoration -->
     <div class="absolute top-0 right-0 p-4 opacity-10 pointer-events-none select-none" aria-hidden="true">
       <AnimatedIcon :icon="category.icon" class="w-28 h-28 sm:w-36 sm:h-36" />
     </div>
 
     <!-- Breadcrumb navigation -->
-    <nav class="flex items-center gap-1.5 text-xs font-medium mb-4 flex-wrap text-zinc-500 dark:text-zinc-400" aria-label="Breadcrumb">
+    <nav class="flex items-center gap-1.5 text-xs font-medium mb-4 flex-wrap text-zinc-500" aria-label="Breadcrumb">
       <NuxtLink
         to="/"
-        class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+        class="hover:text-zinc-900 transition-colors"
       >
         Beranda
       </NuxtLink>
@@ -60,70 +60,76 @@ function handleReset() {
       <template v-if="isSubCategory && parentSlug && parentName">
         <NuxtLink
           :to="`/categories/${parentSlug}`"
-          class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          class="hover:text-zinc-900 transition-colors"
         >
           {{ parentName }}
         </NuxtLink>
         <span class="opacity-40">/</span>
-        <span class="text-zinc-900 dark:text-zinc-100 font-semibold">{{ category.name }}</span>
+        <span class="text-zinc-900 font-semibold">{{ category.name }}</span>
       </template>
 
       <!-- If top-level category page -->
       <template v-else>
-        <span class="text-zinc-900 dark:text-zinc-100 font-semibold">{{ category.name }}</span>
+        <span class="text-zinc-900 font-semibold">{{ category.name }}</span>
       </template>
     </nav>
 
     <!-- Back Button -->
-    <NuxtLink
+    <UButton
       :to="isSubCategory && parentSlug ? `/categories/${parentSlug}` : '/'"
       id="back-to-parent"
-      class="inline-flex items-center gap-2 text-sm font-semibold mb-5 text-zinc-600 dark:text-zinc-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
+      color="neutral"
+      variant="ghost"
+      size="sm"
+      class="mb-5 font-semibold text-zinc-700 hover:text-yellow-600 p-0 hover:bg-transparent"
     >
-      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-      </svg>
-      {{ isSubCategory && parentName ? `Kembali ke ${parentName}` : 'Kembali ke Beranda' }}
-    </NuxtLink>
+      ← {{ isSubCategory && parentName ? `Kembali ke ${parentName}` : 'Kembali ke Beranda' }}
+    </UButton>
 
     <!-- Title -->
     <div class="flex items-center gap-3 mb-2">
       <AnimatedIcon :icon="category.icon" size="xl" />
-      <h1 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-zinc-100 leading-tight">
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 leading-tight">
         {{ category.name }}
       </h1>
     </div>
-    <p class="text-zinc-600 dark:text-zinc-400 mb-5 text-sm sm:text-base max-w-2xl">
+    <p class="text-zinc-600 mb-5 text-sm sm:text-base max-w-2xl">
       {{ category.description }}
     </p>
 
     <!-- Progress Summary & Reset Button -->
     <div class="flex items-center justify-between gap-4 mb-4 flex-wrap">
       <div class="flex items-center gap-3">
-        <div class="text-sm font-medium text-zinc-600 dark:text-zinc-400">
-          <span class="text-2xl font-extrabold text-amber-600 dark:text-amber-400">{{ completed }}</span>
-          <span class="text-zinc-400 dark:text-zinc-500">/{{ total }}</span>
+        <div class="text-sm font-medium text-zinc-600">
+          <span class="text-2xl font-extrabold text-yellow-600">{{ completed }}</span>
+          <span class="text-zinc-400">/{{ total }}</span>
           <span class="ml-1">selesai</span>
         </div>
-        <div
+        <UBadge
           v-if="progress === 100"
-          class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 rounded-full text-xs font-bold"
+          color="yellow"
+          variant="soft"
+          size="md"
+          class="font-bold flex items-center gap-1"
         >
           <AnimatedIcon icon="🎉" size="xs" />
           <span>Selesai!</span>
-        </div>
+        </UBadge>
       </div>
 
       <!-- Reset button -->
-      <button
+      <UButton
         v-if="allowReset && completed > 0"
-        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium text-zinc-700 dark:text-zinc-300 hover:text-red-600 dark:hover:text-red-400 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 transition-all active:scale-95 cursor-pointer"
+        color="error"
+        variant="soft"
+        size="xs"
+        class="rounded-xl font-medium cursor-pointer"
         title="Reset centang pada sub-topik ini"
         @click="handleReset"
       >
         <AnimatedIcon icon="🔄" size="xs" />
         <span>Reset Centang</span>
-      </button>
+      </UButton>
     </div>
 
     <ProgressBar

@@ -47,77 +47,92 @@ function getSubCatCompleted(sc: SubCategory) {
 </script>
 
 <template>
-  <div
-    class="category-card flex flex-col rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 overflow-hidden shadow-xs hover:border-zinc-300 dark:hover:border-zinc-700 transition-all duration-200"
+  <UCard 
+    class="flex flex-col rounded-2xl border border-zinc-200 bg-white overflow-hidden shadow-xs hover:border-yellow-300 hover:shadow-sm transition-all duration-200 h-full"
+    :ui="{
+      header: 'p-5 pb-4',
+      body: 'px-5 py-2 flex-1',
+      footer: 'px-5 py-3 border-t border-zinc-100 bg-zinc-50/50 mt-auto',
+    }"
   >
-    <!-- Card Header -->
-    <div class="flex items-center justify-between px-5 pt-5 pb-4">
-      <div class="flex items-center gap-3 min-w-0 flex-1">
-        <AnimatedIcon :icon="category.icon" size="xl" />
-        <UTooltip :text="category.name" :ui="{ content: 'font-normal', text: 'font-normal' }" class="min-w-0 font-normal">
-          <h2 class="font-extrabold text-zinc-900 dark:text-zinc-100 text-base leading-snug truncate">
-            {{ category.name }}
-          </h2>
-        </UTooltip>
+    <template #header>
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3 min-w-0 flex-1">
+          <AnimatedIcon :icon="category.icon" size="xl" />
+          <UTooltip :text="category.name" class="min-w-0 font-normal">
+            <h2 class="font-extrabold text-zinc-900 text-base leading-snug truncate">
+              {{ category.name }}
+            </h2>
+          </UTooltip>
+        </div>
+        <UButton
+          :to="`/categories/${category.slug}`"
+          :id="`view-all-${category.id}`"
+          color="neutral"
+          variant="subtle"
+          size="xs"
+          class="rounded-xl font-semibold shrink-0 cursor-pointer"
+          :aria-label="`Lihat semua sub-topik ${category.name}`"
+        >
+          Lihat →
+        </UButton>
       </div>
-      <NuxtLink
-        :to="`/categories/${category.slug}`"
-        :id="`view-all-${category.id}`"
-        class="shrink-0 text-xs font-semibold px-3 py-1.5 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-amber-600 dark:hover:text-amber-400 border border-zinc-200 dark:border-zinc-700 transition-colors whitespace-nowrap"
-        :aria-label="`Lihat semua sub-topik ${category.name}`"
-      >
-        Lihat →
-      </NuxtLink>
-    </div>
+    </template>
 
     <!-- Sub-category Chip Pills -->
-    <div class="px-5 pb-5 flex-1">
-      <div
-        v-if="activeSubCategories.length > 0"
-        class="grid grid-cols-2 gap-2"
+    <div
+      v-if="activeSubCategories.length > 0"
+      class="grid grid-cols-2 gap-2 my-1"
+    >
+      <UTooltip
+        v-for="sc in activeSubCategories"
+        :key="sc.id"
+        :text="sc.name"
+        class="w-full min-w-0 font-normal"
       >
-        <UTooltip
-          v-for="sc in activeSubCategories"
-          :key="sc.id"
-          :text="sc.name"
-          :ui="{ content: 'font-normal', text: 'font-normal' }"
-          class="w-full min-w-0 font-normal"
+        <NuxtLink
+          :to="`/categories/${category.slug}/${sc.slug}`"
+          :id="`chip-${sc.id}`"
+          class="group flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs font-semibold transition-all duration-200 w-full min-w-0"
+          :class="getSubCatProgress(sc) === 100
+            ? 'bg-yellow-50 border-yellow-300 text-yellow-900'
+            : getSubCatCompleted(sc) > 0
+              ? 'bg-yellow-50/40 border-yellow-200 text-zinc-800'
+              : 'bg-zinc-50/80 border-zinc-200 text-zinc-800 hover:border-zinc-400'"
         >
-          <NuxtLink
-            :to="`/categories/${category.slug}/${sc.slug}`"
-            :id="`chip-${sc.id}`"
-            class="group flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs font-semibold transition-all duration-200 w-full min-w-0"
-            :class="getSubCatProgress(sc) === 100
-              ? 'bg-amber-50 dark:bg-amber-950/60 border-amber-300 dark:border-amber-700 text-amber-900 dark:text-amber-100'
-              : getSubCatCompleted(sc) > 0
-                ? 'bg-amber-50/40 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800 text-zinc-800 dark:text-zinc-200'
-                : 'bg-zinc-50/80 dark:bg-zinc-800/80 border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 hover:border-zinc-400 dark:hover:border-zinc-500'"
+          <AnimatedIcon :icon="sc.icon" size="sm" />
+          <span class="truncate leading-tight flex-1 min-w-0">{{ sc.name }}</span>
+          
+          <UBadge
+            v-if="getSubCatProgress(sc) === 100"
+            color="primary"
+            variant="soft"
+            size="xs"
+            class="ml-auto shrink-0 font-bold"
           >
-            <AnimatedIcon :icon="sc.icon" size="sm" />
-            <span class="truncate leading-tight flex-1 min-w-0">{{ sc.name }}</span>
-            
-            <span
-              v-if="getSubCatProgress(sc) === 100"
-              class="ml-auto shrink-0 text-amber-600 dark:text-amber-400 font-bold"
-              aria-label="Selesai"
-            >✓</span>
-            <span
-              v-else-if="getSubCatCompleted(sc) > 0"
-              class="ml-auto shrink-0 text-[10px] px-1.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 font-bold"
-            >{{ getSubCatCompleted(sc) }}/{{ sc.items?.length }}</span>
-          </NuxtLink>
-        </UTooltip>
-      </div>
+            ✓
+          </UBadge>
+          <UBadge
+            v-else-if="getSubCatCompleted(sc) > 0"
+            color="primary"
+            variant="subtle"
+            size="xs"
+            class="ml-auto shrink-0 text-[10px] font-bold"
+          >
+            {{ getSubCatCompleted(sc) }}/{{ sc.items?.length }}
+          </UBadge>
+        </NuxtLink>
+      </UTooltip>
+    </div>
 
-      <!-- Loading / Empty skeleton placeholder -->
-      <div v-else class="grid grid-cols-2 gap-2">
-        <div class="h-9 rounded-xl bg-gray-100 dark:bg-gray-800/50 animate-pulse" />
-        <div class="h-9 rounded-xl bg-gray-100 dark:bg-gray-800/50 animate-pulse" />
-      </div>
+    <!-- Loading / Empty skeleton placeholder -->
+    <div v-else class="grid grid-cols-2 gap-2 my-1">
+      <USkeleton class="h-9 rounded-xl" />
+      <USkeleton class="h-9 rounded-xl" />
     </div>
 
     <!-- Progress bar footer -->
-    <div class="px-5 pb-4 pt-3 border-t border-black/5 dark:border-white/5 mt-auto bg-black/2 dark:bg-white/2">
+    <template #footer>
       <ProgressBar
         :value="progress"
         :total="totalItems"
@@ -126,6 +141,6 @@ function getSubCatCompleted(sc: SubCategory) {
         show-label
         show-count
       />
-    </div>
-  </div>
+    </template>
+  </UCard>
 </template>

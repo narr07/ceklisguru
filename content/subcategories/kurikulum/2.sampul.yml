@@ -1,0 +1,21 @@
+id: kurikulum-sampul
+slug: sampul
+parentId: kurikulum
+parentSlug: kurikulum
+parentName: Kurikulum Satuan Pendidikan (KSP)
+name: II. Sampul / Halaman Judul
+icon: "011-bookmark.svg"
+description: Kelengkapan elemen pada sampul atau halaman judul dokumen KSP
+items:
+  - id: ks1
+    title: Memuat Judul yang tepat
+    description: "Judul dokumen ditulis dengan jelas dan tepat sasaran"
+  - id: ks2
+    title: Terdapat Logo Sekolah dan/atau Daerah
+    description: "Menyertakan logo resmi yang relevan pada halaman sampul"
+  - id: ks3
+    title: Memuat Tahun Ajaran
+    description: "Mencantumkan tahun ajaran yang berlaku (contoh: 2026/2027)"
+  - id: ks4
+    title: Terdapat Nama dan Alamat Sekolah
+    description: "Identitas sekolah ditulis lengkap beserta alamat resminya"

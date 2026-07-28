@@ -48,22 +48,24 @@ useHead({
 </script>
 
 <template>
-  <div class="min-h-screen bg-zinc-50 dark:bg-zinc-950">
+  <div class="min-h-screen bg-white">
     <AppHeader />
 
-    <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+    <UContainer class="max-w-3xl py-8 sm:py-10">
       <!-- Error State -->
       <div v-if="error || !subcategory" class="text-center py-20">
         <p class="text-5xl mb-4">😕</p>
-        <h1 class="text-2xl font-bold text-zinc-800 dark:text-zinc-200 mb-2">
+        <h1 class="text-2xl font-bold text-zinc-800 mb-2">
           Sub-topik tidak ditemukan
         </h1>
-        <NuxtLink
+        <UButton
           :to="`/categories/${slug}`"
-          class="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-colors mt-4"
+          color="yellow"
+          size="md"
+          class="font-semibold rounded-xl mt-4"
         >
           ← Kembali ke Kategori
-        </NuxtLink>
+        </UButton>
       </div>
 
       <template v-else>
@@ -90,18 +92,21 @@ useHead({
         </section>
 
         <!-- Bottom nav -->
-        <div class="mt-10 pt-6 border-t border-zinc-200 dark:border-zinc-800 flex justify-between items-center">
-          <NuxtLink
+        <div class="mt-10 pt-6 border-t border-zinc-200 flex justify-between items-center">
+          <UButton
             :to="`/categories/${subcategory.parentSlug}`"
-            class="inline-flex items-center gap-2 text-sm font-semibold text-zinc-600 dark:text-zinc-400 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
+            color="neutral"
+            variant="ghost"
+            size="sm"
+            class="font-semibold text-zinc-600 hover:text-yellow-600 p-0 hover:bg-transparent"
           >
             ← {{ subcategory.parentName }}
-          </NuxtLink>
-          <p class="text-sm font-medium text-zinc-400 dark:text-zinc-500">
+          </UButton>
+          <p class="text-sm font-medium text-zinc-400">
             {{ total }} checklist
           </p>
         </div>
       </template>
-    </main>
+    </UContainer>
   </div>
 </template>

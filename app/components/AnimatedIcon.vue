@@ -8,7 +8,7 @@ const props = withDefaults(defineProps<Props>(), {
   size: 'md',
 })
 
-// Mapping emoji ke file SVG lokal yang ada di /public/icon/
+// Mapping emoji & nama file ke SVG lokal yang ada di /public/icon/
 const localEmojiMap: Record<string, string> = {
   // Category Icons
   '📋': '/icon/018-notes.svg',
@@ -50,7 +50,7 @@ const localEmojiMap: Record<string, string> = {
 }
 
 const iconSrc = computed(() => {
-  if (!props.icon) return null
+  if (!props.icon) return '/icon/018-notes.svg'
 
   // Jika berupa path URL absolut / HTTP
   if (props.icon.startsWith('/') || props.icon.startsWith('http://') || props.icon.startsWith('https://')) {
@@ -67,7 +67,7 @@ const iconSrc = computed(() => {
     return localEmojiMap[props.icon]
   }
 
-  return null
+  return `/icon/${props.icon}`
 })
 
 const sizeClass = computed(() => {
@@ -89,7 +89,7 @@ const sizeClass = computed(() => {
     v-if="iconSrc"
     :src="iconSrc"
     :alt="icon"
-    class="object-contain inline-block shrink-0 select-none transition-transform duration-200 group-hover:scale-105"
+    class="object-contain inline-block shrink-0 select-none"
     :class="sizeClass"
     loading="lazy"
   />

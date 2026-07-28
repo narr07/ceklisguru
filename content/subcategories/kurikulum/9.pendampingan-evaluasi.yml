@@ -1,0 +1,18 @@
+id: kurikulum-pendampingan-evaluasi
+slug: pendampingan-evaluasi
+parentId: kurikulum
+parentSlug: kurikulum
+parentName: Kurikulum Satuan Pendidikan (KSP)
+name: X. Pendampingan, Evaluasi dan Pengembangan Profesional
+icon: "036-review.svg"
+description: Strategi untuk memastikan kualitas kurikulum melalui pendampingan, evaluasi, dan pengembangan SDM
+items:
+  - id: kpe1
+    title: Pendampingan implementasi kurikulum
+    description: "Menguraikan peran, strategi, dan waktu pelaksanaan dalam pendampingan pelaksanaan kurikulum di sekolah"
+  - id: kpe2
+    title: Evaluasi implementasi kurikulum
+    description: "Menjelaskan waktu pelaksanaan evaluasi KSP, strategi/cara melakukan evaluasi, serta pihak-pihak yang dilibatkan"
+  - id: kpe3
+    title: Program pengembangan Profesional
+    description: "Direncanakan oleh pimpinan berdasarkan rencana pengembangan satuan pendidikan dan masukan pemangku kepentingan"

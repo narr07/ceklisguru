@@ -1,0 +1,15 @@
+id: penilaian-formatif
+slug: formatif
+parentId: penilaian
+parentSlug: penilaian
+parentName: Penilaian & Evaluasi
+name: Penilaian Formatif
+icon: "032-rating.svg"
+description: Melakukan penilaian berkala dengan rubrik yang jelas untuk memantau perkembangan belajar
+items:
+  - id: a1
+    title: Gunakan penilaian formatif secara berkala
+    description: "Contoh: Lakukan kuis singkat, exit ticket, atau observasi setiap sesi untuk mendeteksi kesulitan belajar lebih awal"
+  - id: a2
+    title: Rancang rubrik penilaian yang jelas dan transparan
+    description: "Contoh: Bagikan rubrik ke siswa sebelum tugas dimulai agar mereka tahu standar yang diharapkan"

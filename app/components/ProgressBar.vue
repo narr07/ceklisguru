@@ -1,14 +1,15 @@
 <script setup lang="ts">
 interface Props {
-  value: number
+  value?: number
   total?: number
   completed?: number
-  size?: 'sm' | 'md' | 'lg'
+  size?: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   showLabel?: boolean
   showCount?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
+  value: 0,
   total: 0,
   completed: 0,
   size: 'md',
@@ -16,17 +17,21 @@ const props = withDefaults(defineProps<Props>(), {
   showCount: false,
 })
 
-const heightClass = computed(() => ({
-  sm: 'h-1.5',
-  md: 'h-2.5',
-  lg: 'h-3.5',
-}[props.size]))
+const progressValue = computed(() => {
+  if (typeof props.value === 'number' && !isNaN(props.value)) {
+    return Math.min(100, Math.max(0, props.value))
+  }
+  return 0
+})
 
 const labelSize = computed(() => ({
-  sm: 'text-xs',
-  md: 'text-sm',
-  lg: 'text-base',
-}[props.size]))
+  '2xs': 'text-xs',
+  'xs': 'text-xs',
+  'sm': 'text-xs',
+  'md': 'text-sm',
+  'lg': 'text-base',
+  'xl': 'text-lg',
+}[props.size] || 'text-sm'))
 </script>
 
 <template>
@@ -37,30 +42,23 @@ const labelSize = computed(() => ({
     >
       <span
         v-if="showCount && total > 0"
-        :class="[labelSize, 'text-gray-500 dark:text-gray-400 font-medium']"
+        :class="[labelSize, 'text-neutral-500 font-medium']"
       >
         {{ completed }}/{{ total }} selesai
       </span>
       <span
         v-if="showLabel"
-        :class="[labelSize, 'font-bold text-amber-600 dark:text-amber-400 ml-auto']"
+        :class="[labelSize, 'font-bold text-primary-600 ml-auto']"
       >
-        {{ value }}%
+        {{ progressValue }}%
       </span>
     </div>
-    <div
-      class="w-full bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden"
-      :class="heightClass"
-      role="progressbar"
-      :aria-valuenow="value"
-      aria-valuemin="0"
-      aria-valuemax="100"
-    >
-      <div
-        class="h-full rounded-full transition-all duration-500 ease-out"
-        :class="value > 0 ? 'progress-bar-fill' : 'bg-zinc-200 dark:bg-zinc-700'"
-        :style="{ width: `${Math.max(value, value > 0 ? 3 : 0)}%` }"
-      />
-    </div>
+    <UProgress
+      :model-value="progressValue"
+      :max="100"
+      color="primary"
+      :size="size"
+      class="w-full"
+    />
   </div>
 </template>

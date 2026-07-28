@@ -1,0 +1,21 @@
+id: model-pembelajaran-pjbl
+slug: pjbl
+parentId: model-pembelajaran
+parentSlug: model-pembelajaran
+parentName: Implementasi Model Pembelajaran
+name: Project-Based Learning
+icon: "027-sketchbook.svg"
+description: Merancang proyek nyata berkolaborasi dan menghasilkan produk autentik yang bermakna
+items:
+  - id: m_pjbl1
+    title: Rancang proyek autentik dengan produk akhir yang nyata
+    description: "Contoh: Buat buku panduan wisata digital desa, aplikasi sederhana, atau pameran karya seni untuk komunitas"
+    tip: "Proyek yang dikelompokkan berdasarkan solusi nyata bagi masyarakat lebih mudah dipahami siswa dibanding proyek teoritis."
+  - id: m_pjbl2
+    title: Integrasikan kolaborasi tim dan manajemen waktu
+    description: "Contoh: Gunakan kanban board atau timeline proyek, bagi peran tim, dan lakukan check-in mingguan"
+    tip: "Berikan setiap anggota tim tanggung jawab spesifik agar seluruh siswa terlibat aktif tanpa ada yang pasif."
+  - id: m_pjbl3
+    title: Lakukan refleksi proses dan presentasi produk akhir
+    description: "Contoh: Adakan pameran karya, demo hari, atau publikasi online dan ajak siswa merefleksikan proses belajarnya"
+    tip: "Undang guru lain atau wali murid saat presentasi agar rasa bangga dan motivasi siswa semakin meningkat."
