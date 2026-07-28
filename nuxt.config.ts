@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/ui',
     '@pinia/nuxt',
-    '@nuxt/studio',
+    'nuxt-studio',
   ],
 
   devtools: { enabled: true },
