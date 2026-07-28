@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/ui',
     '@pinia/nuxt',
+    '@nuxt/studio',
   ],
 
   devtools: { enabled: true },
@@ -30,5 +31,14 @@ export default defineNuxtConfig({
 
   colorMode: {
     classSuffix: '',
+  },
+
+  studio: {
+    repository: {
+      provider: 'github',
+      owner: 'narr07',
+      repo: 'ceklisguru',
+      branch: 'master',
+    },
   },
 })
