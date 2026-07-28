@@ -22,7 +22,7 @@ const subcategoriesByParent = computed(() => {
   const map: Record<string, SubCategory[]> = {}
   if (subcategories.value) {
     for (const sc of subcategories.value) {
-      const parentId = (sc as any).parentId
+      const parentId = (sc as any).parentId || (sc as any).parentSlug
       if (parentId) {
         if (!map[parentId]) map[parentId] = []
         map[parentId].push(sc as unknown as SubCategory)

@@ -33,6 +33,18 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
 
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/'],
+    },
+  },
+
+  routeRules: {
+    '/': { prerender: true },
+    '/categories/**': { prerender: true },
+  },
+
   studio: {
     repository: {
       provider: 'github',
