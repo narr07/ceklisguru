@@ -60,7 +60,7 @@ useHead({
         </h1>
         <NuxtLink
           :to="`/categories/${slug}`"
-          class="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl transition-colors mt-4"
+          class="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-colors mt-4"
         >
           ← Kembali ke Kategori
         </NuxtLink>
@@ -93,7 +93,7 @@ useHead({
         <div class="mt-10 pt-6 border-t border-zinc-200 dark:border-zinc-800 flex justify-between items-center">
           <NuxtLink
             :to="`/categories/${subcategory.parentSlug}`"
-            class="inline-flex items-center gap-2 text-sm font-semibold text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+            class="inline-flex items-center gap-2 text-sm font-semibold text-zinc-600 dark:text-zinc-400 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
           >
             ← {{ subcategory.parentName }}
           </NuxtLink>

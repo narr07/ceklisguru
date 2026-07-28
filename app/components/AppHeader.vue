@@ -17,12 +17,12 @@ function toggleDark() {
           to="/"
           class="flex items-center gap-3 group"
         >
-          <div class="w-9 h-9 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 flex items-center justify-center shadow-xs">
+          <div class="w-9 h-9 rounded-xl bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 flex items-center justify-center shadow-xs">
             <AnimatedIcon icon="✅" size="md" />
           </div>
           <div class="flex flex-col">
             <span class="text-lg font-black text-zinc-900 dark:text-zinc-100 leading-tight">CeklisGuru</span>
-            <span class="text-xs text-emerald-600 dark:text-emerald-400 font-semibold leading-tight hidden sm:block">Platform Checklist Guru Indonesia</span>
+            <span class="text-xs text-amber-600 dark:text-amber-400 font-semibold leading-tight hidden sm:block">Platform Checklist Guru Indonesia</span>
           </div>
         </NuxtLink>
 

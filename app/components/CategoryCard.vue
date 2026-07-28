@@ -63,7 +63,7 @@ function getSubCatCompleted(sc: SubCategory) {
       <NuxtLink
         :to="`/categories/${category.slug}`"
         :id="`view-all-${category.id}`"
-        class="shrink-0 text-xs font-semibold px-3 py-1.5 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 border border-zinc-200 dark:border-zinc-700 transition-colors whitespace-nowrap"
+        class="shrink-0 text-xs font-semibold px-3 py-1.5 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-amber-600 dark:hover:text-amber-400 border border-zinc-200 dark:border-zinc-700 transition-colors whitespace-nowrap"
         :aria-label="`Lihat semua sub-topik ${category.name}`"
       >
         Lihat →
@@ -88,9 +88,9 @@ function getSubCatCompleted(sc: SubCategory) {
             :id="`chip-${sc.id}`"
             class="group flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs font-semibold transition-all duration-200 w-full min-w-0"
             :class="getSubCatProgress(sc) === 100
-              ? 'bg-emerald-50 dark:bg-emerald-950/60 border-emerald-300 dark:border-emerald-700 text-emerald-900 dark:text-emerald-100'
+              ? 'bg-amber-50 dark:bg-amber-950/60 border-amber-300 dark:border-amber-700 text-amber-900 dark:text-amber-100'
               : getSubCatCompleted(sc) > 0
-                ? 'bg-emerald-50/40 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800 text-zinc-800 dark:text-zinc-200'
+                ? 'bg-amber-50/40 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800 text-zinc-800 dark:text-zinc-200'
                 : 'bg-zinc-50/80 dark:bg-zinc-800/80 border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 hover:border-zinc-400 dark:hover:border-zinc-500'"
           >
             <AnimatedIcon :icon="sc.icon" size="sm" />
@@ -98,12 +98,12 @@ function getSubCatCompleted(sc: SubCategory) {
             
             <span
               v-if="getSubCatProgress(sc) === 100"
-              class="ml-auto shrink-0 text-emerald-600 dark:text-emerald-400 font-bold"
+              class="ml-auto shrink-0 text-amber-600 dark:text-amber-400 font-bold"
               aria-label="Selesai"
             >✓</span>
             <span
               v-else-if="getSubCatCompleted(sc) > 0"
-              class="ml-auto shrink-0 text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 font-bold"
+              class="ml-auto shrink-0 text-[10px] px-1.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 font-bold"
             >{{ getSubCatCompleted(sc) }}/{{ sc.items?.length }}</span>
           </NuxtLink>
         </UTooltip>

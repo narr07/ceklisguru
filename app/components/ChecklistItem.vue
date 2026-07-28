@@ -23,7 +23,7 @@ function toggle() {
   <li
     class="group flex items-start gap-4 p-4 sm:p-5 rounded-2xl border transition-all duration-200 cursor-pointer select-none"
     :class="isChecked
-      ? 'bg-emerald-50/70 dark:bg-emerald-950/30 border-emerald-300 dark:border-emerald-700/80'
+      ? 'bg-amber-50/80 dark:bg-amber-950/30 border-amber-300 dark:border-amber-700/80'
       : 'bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 hover:bg-zinc-50/50 dark:hover:bg-zinc-800/40'"
     :id="`checklist-item-${item.id}`"
     role="checkbox"
@@ -38,8 +38,8 @@ function toggle() {
       <div
         class="w-6 h-6 rounded-lg border-2 flex items-center justify-center transition-all duration-200"
         :class="isChecked
-          ? 'bg-emerald-600 dark:bg-emerald-500 border-emerald-600 dark:border-emerald-500 text-white'
-          : 'border-zinc-300 dark:border-zinc-600 group-hover:border-emerald-500 dark:group-hover:border-emerald-400'"
+          ? 'bg-amber-500 border-amber-500 text-white'
+          : 'border-zinc-300 dark:border-zinc-600 group-hover:border-amber-500 dark:group-hover:border-amber-400'"
       >
         <Transition
           enter-active-class="transition-all duration-150"

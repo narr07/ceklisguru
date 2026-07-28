@@ -54,7 +54,7 @@ useHead({
         <h1 class="text-2xl font-bold text-zinc-800 dark:text-zinc-200 mb-2">
           Kategori tidak ditemukan
         </h1>
-        <NuxtLink to="/" class="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl transition-colors mt-4">
+        <NuxtLink to="/" class="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-colors mt-4">
           ← Kembali ke Beranda
         </NuxtLink>
       </div>
@@ -72,7 +72,7 @@ useHead({
         <!-- Sub-category grid -->
         <section :aria-label="`Sub-topik ${category.name}`">
           <h2 class="text-base font-bold text-zinc-700 dark:text-zinc-300 mb-4 flex items-center gap-2">
-            <span class="w-1.5 h-5 bg-emerald-500 rounded-full inline-block" aria-hidden="true" />
+            <span class="w-1.5 h-5 bg-amber-500 rounded-full inline-block" aria-hidden="true" />
             {{ subCategories?.length ?? 0 }} Sub-topik
           </h2>
 
@@ -88,19 +88,19 @@ useHead({
               class="group flex items-start gap-4 p-5 rounded-2xl border bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all duration-200 cursor-pointer"
               :class="[
                 store.getCategoryProgress(sc.id, sc.items.length) === 100
-                  ? 'border-emerald-400 dark:border-emerald-600 bg-emerald-50/30 dark:bg-emerald-950/20'
+                  ? 'border-amber-400 dark:border-amber-600 bg-amber-50/30 dark:bg-amber-950/20'
                   : ''
               ]"
             >
               <AnimatedIcon :icon="sc.icon" size="lg" class="mt-0.5" />
               <div class="flex-1 min-w-0">
                 <div class="flex items-center justify-between gap-2 mb-1">
-                  <h3 class="font-bold text-zinc-900 dark:text-zinc-100 text-sm sm:text-base group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                  <h3 class="font-bold text-zinc-900 dark:text-zinc-100 text-sm sm:text-base group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
                     {{ sc.name }}
                   </h3>
                   <span
                     v-if="store.getCategoryProgress(sc.id, sc.items.length) === 100"
-                    class="shrink-0 text-xs font-bold px-2 py-0.5 bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 rounded-full"
+                    class="shrink-0 text-xs font-bold px-2 py-0.5 bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 rounded-full"
                   >✓ Selesai</span>
                   <span v-else class="shrink-0 text-xs text-zinc-400 dark:text-zinc-500 font-medium">
                     {{ sc.items.length }} items

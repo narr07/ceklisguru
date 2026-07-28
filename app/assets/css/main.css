@@ -5,18 +5,18 @@
 @theme {
   --font-family-sans: 'Alan Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Primary Accent: Natural Nuxt UI Emerald */
-  --color-primary-50: #ecfdf5;
-  --color-primary-100: #d1fae5;
-  --color-primary-200: #a7f3d0;
-  --color-primary-300: #6ee7b7;
-  --color-primary-400: #34d399;
-  --color-primary-500: #10b981;
-  --color-primary-600: #059669;
-  --color-primary-700: #047857;
-  --color-primary-800: #065f46;
-  --color-primary-900: #064e3b;
-  --color-primary-950: #022c22;
+  /* Primary Accent: Warm Yellow / Amber */
+  --color-primary-50: #fffbeb;
+  --color-primary-100: #fef3c7;
+  --color-primary-200: #fde68a;
+  --color-primary-300: #fcd34d;
+  --color-primary-400: #fbbf24;
+  --color-primary-500: #f59e0b;
+  --color-primary-600: #d97706;
+  --color-primary-700: #b45309;
+  --color-primary-800: #92400e;
+  --color-primary-900: #78350f;
+  --color-primary-950: #451a03;
 }
 
 /* Base resets & typography */
@@ -39,13 +39,13 @@ body {
   background-color: #09090b;
 }
 
-/* Progress bar - natural solid fill */
+/* Progress bar - yellow/amber solid fill */
 .progress-bar-fill {
-  background-color: #10b981;
+  background-color: #f59e0b;
 }
 
 .dark .progress-bar-fill {
-  background-color: #34d399;
+  background-color: #fbbf24;
 }
 
 /* Structural Card transition */

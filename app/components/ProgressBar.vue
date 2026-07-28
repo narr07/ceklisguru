@@ -43,7 +43,7 @@ const labelSize = computed(() => ({
       </span>
       <span
         v-if="showLabel"
-        :class="[labelSize, 'font-bold text-emerald-600 dark:text-emerald-400 ml-auto']"
+        :class="[labelSize, 'font-bold text-amber-600 dark:text-amber-400 ml-auto']"
       >
         {{ value }}%
       </span>

@@ -78,7 +78,7 @@ function handleReset() {
     <NuxtLink
       :to="isSubCategory && parentSlug ? `/categories/${parentSlug}` : '/'"
       id="back-to-parent"
-      class="inline-flex items-center gap-2 text-sm font-semibold mb-5 text-zinc-600 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+      class="inline-flex items-center gap-2 text-sm font-semibold mb-5 text-zinc-600 dark:text-zinc-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
     >
       <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
         <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
@@ -101,13 +101,13 @@ function handleReset() {
     <div class="flex items-center justify-between gap-4 mb-4 flex-wrap">
       <div class="flex items-center gap-3">
         <div class="text-sm font-medium text-zinc-600 dark:text-zinc-400">
-          <span class="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">{{ completed }}</span>
+          <span class="text-2xl font-extrabold text-amber-600 dark:text-amber-400">{{ completed }}</span>
           <span class="text-zinc-400 dark:text-zinc-500">/{{ total }}</span>
           <span class="ml-1">selesai</span>
         </div>
         <div
           v-if="progress === 100"
-          class="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 rounded-full text-xs font-bold"
+          class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 rounded-full text-xs font-bold"
         >
           <AnimatedIcon icon="🎉" size="xs" />
           <span>Selesai!</span>
