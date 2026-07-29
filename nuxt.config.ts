@@ -5,10 +5,24 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@pinia/nuxt',
     'nuxt-studio',
+    'nuxt-og-image',
+    'nuxt-site-config',
   ],
 
   devtools: { enabled: true },
   compatibilityDate: '2024-04-03',
+
+  site: {
+    url: 'https://ceklisguru.permadi.dev',
+    name: 'CeklisGuru'
+  },
+
+  ogImage: {
+    defaults: {
+      component: 'Brutalist',
+    },
+    runtimeCacheDir: '.og-cache',
+  },
 
   css: ['~/assets/css/main.css'],
 
@@ -39,6 +53,7 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/'],
+      concurrency: 2,
     },
   },
 
