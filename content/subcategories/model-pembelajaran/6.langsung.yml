@@ -4,7 +4,7 @@ parentId: model-pembelajaran
 parentSlug: model-pembelajaran
 parentName: Implementasi Model Pembelajaran
 name: Direct Instruction
-icon: "016-chalk board.svg"
+icon: "016-chalk-board.svg"
 description: Menyampaikan penjelasan terstruktur dengan contoh jelas dan latihan terpandu sebelum mandiri
 items:
   - id: m_di1

@@ -4,7 +4,7 @@ parentId: kurikulum
 parentSlug: kurikulum
 parentName: Kurikulum Satuan Pendidikan (KSP)
 name: I. Proses Penyusunan
-icon: "016-edit tool.svg"
+icon: "016-edit-tool.svg"
 description: Proses penyusunan dan pelibatan stakeholder dalam pembuatan Kurikulum Satuan Pendidikan (KSP)
 items:
   - id: kp1

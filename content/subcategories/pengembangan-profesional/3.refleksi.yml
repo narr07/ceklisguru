@@ -4,7 +4,7 @@ parentId: pengembangan-profesional
 parentSlug: pengembangan-profesional
 parentName: Pengembangan Profesional
 name: Portofolio & Umpan Balik
-icon: "047-sticky notes.svg"
+icon: "047-sticky-notes.svg"
 description: Meminta umpan balik secara aktif dan mendokumentasikan pencapaian profesional
 items:
   - id: pr6

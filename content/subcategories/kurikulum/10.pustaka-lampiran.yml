@@ -4,7 +4,7 @@ parentId: kurikulum
 parentSlug: kurikulum
 parentName: Kurikulum Satuan Pendidikan (KSP)
 name: XI - XII. Daftar Pustaka & Lampiran
-icon: "005-attach file.svg"
+icon: "005-attach-file.svg"
 description: Referensi hukum dan dokumen-dokumen pendukung dalam KSP
 items:
   - id: kpl1

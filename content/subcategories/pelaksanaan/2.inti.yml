@@ -4,7 +4,7 @@ parentId: pelaksanaan
 parentSlug: pelaksanaan
 parentName: Pelaksanaan Pembelajaran
 name: Inti Pembelajaran
-icon: "027-pen tool.svg"
+icon: "027-pen-tool.svg"
 description: Melaksanakan pembelajaran inti dengan variasi metode, instruksi jelas, dan monitoring aktif
 items:
   - id: i3

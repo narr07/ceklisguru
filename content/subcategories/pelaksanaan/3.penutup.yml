@@ -4,7 +4,7 @@ parentId: pelaksanaan
 parentSlug: pelaksanaan
 parentName: Pelaksanaan Pembelajaran
 name: Keterlibatan & Penutup
-icon: "009-best results.svg"
+icon: "009-best-results.svg"
 description: Mendorong partisipasi aktif seluruh siswa dan menutup pembelajaran dengan refleksi bermakna
 items:
   - id: i7

@@ -59,8 +59,8 @@ useHead({
           Sub-topik tidak ditemukan
         </h1>
         <UButton
-          :to="`/categories/${slug}`"
-          color="yellow"
+          :to="`/kategori/${slug}`"
+          color="primary"
           size="md"
           class="font-semibold rounded-xl mt-4"
         >
@@ -94,7 +94,7 @@ useHead({
         <!-- Bottom nav -->
         <div class="mt-10 pt-6 border-t border-zinc-200 flex justify-between items-center">
           <UButton
-            :to="`/categories/${subcategory.parentSlug}`"
+            :to="`/kategori/${subcategory.parentSlug}`"
             color="neutral"
             variant="ghost"
             size="sm"

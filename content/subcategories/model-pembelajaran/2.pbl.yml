@@ -4,7 +4,7 @@ parentId: model-pembelajaran
 parentSlug: model-pembelajaran
 parentName: Implementasi Model Pembelajaran
 name: Problem-Based Learning
-icon: "050-idea bulb.svg"
+icon: "050-idea-bulb.svg"
 description: Menyajikan masalah autentik sebagai pemicu belajar dan membimbing investigasi sistematis
 items:
   - id: m_pbl1

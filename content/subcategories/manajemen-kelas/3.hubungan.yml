@@ -4,7 +4,7 @@ parentId: manajemen-kelas
 parentSlug: manajemen-kelas
 parentName: Manajemen Kelas
 name: Hubungan & Inklusivitas
-icon: "006-contact us.svg"
+icon: "006-contact-us.svg"
 description: Membangun hubungan positif dengan siswa dan mengelola keberagaman secara inklusif dan adil
 items:
   - id: c6

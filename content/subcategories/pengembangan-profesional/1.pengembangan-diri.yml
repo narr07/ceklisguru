@@ -4,7 +4,7 @@ parentId: pengembangan-profesional
 parentSlug: pengembangan-profesional
 parentName: Pengembangan Profesional
 name: Belajar & Refleksi
-icon: "029-phone book.svg"
+icon: "029-phone-book.svg"
 description: Mengikuti pelatihan, merefleksikan praktik mengajar, dan membaca literatur pendidikan
 items:
   - id: pr1

@@ -4,7 +4,7 @@ parentId: kurikulum
 parentSlug: kurikulum
 parentName: Kurikulum Satuan Pendidikan (KSP)
 name: VIII. Pengorganisasian Pembelajaran
-icon: "040-school bag.svg"
+icon: "040-school-bag.svg"
 description: Struktur pelaksanaan kurikulum mulai dari intrakurikuler, kokurikuler, ekstrakurikuler, hingga pembiasaan
 items:
   - id: kpp1

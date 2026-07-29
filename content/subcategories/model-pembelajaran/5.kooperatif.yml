@@ -4,7 +4,7 @@ parentId: model-pembelajaran
 parentSlug: model-pembelajaran
 parentName: Implementasi Model Pembelajaran
 name: Cooperative Learning
-icon: "002-address book.svg"
+icon: "002-address-book.svg"
 description: Merancang pembelajaran kolaboratif dengan ketergantungan positif dan evaluasi proses kerjasama
 items:
   - id: m_cl1

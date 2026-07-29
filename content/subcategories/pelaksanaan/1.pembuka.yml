@@ -4,7 +4,7 @@ parentId: pelaksanaan
 parentSlug: pelaksanaan
 parentName: Pelaksanaan Pembelajaran
 name: Pembuka
-icon: "050-idea bulb.svg"
+icon: "050-idea-bulb.svg"
 description: Membuka pembelajaran dengan apersepsi menarik dan menyampaikan tujuan yang jelas
 items:
   - id: i1

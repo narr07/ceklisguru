@@ -44,7 +44,7 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/': { prerender: true },
-    '/categories/**': { prerender: true },
+    '/kategori/**': { prerender: true },
   },
 
   studio: {

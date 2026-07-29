@@ -66,7 +66,7 @@ function getSubCatCompleted(sc: SubCategory) {
           </UTooltip>
         </div>
         <UButton
-          :to="`/categories/${category.slug}`"
+          :to="`/kategori/${category.slug}`"
           :id="`view-all-${category.id}`"
           color="neutral"
           variant="subtle"
@@ -91,7 +91,7 @@ function getSubCatCompleted(sc: SubCategory) {
         class="w-full min-w-0 font-normal"
       >
         <NuxtLink
-          :to="`/categories/${category.slug}/${sc.slug}`"
+          :to="`/kategori/${category.slug}/${sc.slug}`"
           :id="`chip-${sc.id}`"
           class="group flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs font-semibold transition-all duration-200 w-full min-w-0"
           :class="getSubCatProgress(sc) === 100

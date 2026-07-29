@@ -59,7 +59,7 @@ function handleReset() {
       <!-- If sub-category: show parent link -->
       <template v-if="isSubCategory && parentSlug && parentName">
         <NuxtLink
-          :to="`/categories/${parentSlug}`"
+          :to="`/kategori/${parentSlug}`"
           class="hover:text-zinc-900 transition-colors"
         >
           {{ parentName }}
@@ -76,7 +76,7 @@ function handleReset() {
 
     <!-- Back Button -->
     <UButton
-      :to="isSubCategory && parentSlug ? `/categories/${parentSlug}` : '/'"
+      :to="isSubCategory && parentSlug ? `/kategori/${parentSlug}` : '/'"
       id="back-to-parent"
       color="neutral"
       variant="ghost"
@@ -107,7 +107,7 @@ function handleReset() {
         </div>
         <UBadge
           v-if="progress === 100"
-          color="yellow"
+          color="primary"
           variant="soft"
           size="md"
           class="font-bold flex items-center gap-1"

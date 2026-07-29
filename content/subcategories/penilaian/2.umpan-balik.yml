@@ -4,7 +4,7 @@ parentId: penilaian
 parentSlug: penilaian
 parentName: Penilaian & Evaluasi
 name: Umpan Balik & Variasi
-icon: "019-online chat.svg"
+icon: "019-online-chat.svg"
 description: Memberikan umpan balik konstruktif dan menggunakan beragam bentuk penilaian secara holistik
 items:
   - id: a3

@@ -56,7 +56,7 @@ useHead({
         </h1>
         <UButton
           to="/"
-          color="yellow"
+          color="primary"
           size="md"
           class="font-semibold rounded-xl mt-4"
         >
@@ -88,7 +88,7 @@ useHead({
             <NuxtLink
               v-for="sc in subCategories"
               :key="sc.id"
-              :to="`/categories/${category.slug}/${sc.slug}`"
+              :to="`/kategori/${category.slug}/${sc.slug}`"
               :id="`subcat-card-${sc.id}`"
               class="group flex items-start gap-4 p-5 rounded-2xl border bg-white border-zinc-200 hover:border-zinc-300 transition-all duration-200 cursor-pointer shadow-xs"
               :class="[
@@ -105,7 +105,7 @@ useHead({
                   </h3>
                   <UBadge
                     v-if="store.getCategoryProgress(sc.id, sc.items.length) === 100"
-                    color="yellow"
+                    color="primary"
                     variant="soft"
                     size="xs"
                     class="shrink-0 font-bold"
