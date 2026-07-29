@@ -11,7 +11,11 @@
           class="flex items-center gap-3 group"
         >
           <div class="w-9 h-9 rounded-xl bg-yellow-50 border border-yellow-200 flex items-center justify-center shadow-xs">
-            <AnimatedIcon icon="✅" size="md" />
+            <img
+              src="/apple-touch-icon.png"
+              alt="CeklisGuru"
+              class="w-6 h-6 object-contain"
+            />
           </div>
           <div class="flex flex-col">
             <span class="text-lg font-black text-zinc-900 leading-tight">CeklisGuru</span>
