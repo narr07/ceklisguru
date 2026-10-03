@@ -1,0 +1,46 @@
+kunci: memanfaatkan-kecerdasan-artifisial
+slug: memanfaatkan-kecerdasan-artifisial
+tahap: berkembang
+judul: Memanfaatkan kecerdasan artifisial
+ringkasan: Kecerdasan artifisial (KA) bisa membantu guru merencanakan, melaksanakan, dan menilai pembelajaran, selama dipakai dengan prinsip yang benar.
+ikon: 037-robot.svg
+terkait: [komunitas-belajar-dan-pengembangan-diri, melayani-keragaman-murid]
+butir:
+  - kunci: ka-alat-bantu
+    judul: Posisikan KA sebagai alat bantu, kamu tetap pengambil keputusan
+    penjelasan: Jangan serahkan proses pembelajaran sepenuhnya kepada KA. Pakai KA untuk memperkuat interaksi antarmanusia, bukan menggantikannya.
+    contoh: "Contoh pemanfaatan di Panduan: membantu menyusun RPP, merancang asesmen awal, mengembangkan bahan ajar, menyusun skenario pembelajaran, dan mengembangkan instrumen asesmen."
+    dasar:
+      - Panduan Pemanfaatan Kecerdasan Artifisial untuk Guru, Bab 4 B.1 Berpusat pada manusia dan Bab 4 C
+
+  - kunci: tanpa-data-pribadi
+    judul: Jangan menulis data pribadi atau rahasia di prompt
+    penjelasan: Termasuk data murid. Perlindungan data murid adalah bagian dari etika memakai KA.
+    dasar:
+      - Panduan Pemanfaatan Kecerdasan Artifisial untuk Guru, Bab 4 B.2 langkah nomor 1
+      - Panduan Pemanfaatan Kecerdasan Artifisial untuk Guru, Bab 6 B.2 Kesadaran Etika (perlindungan data murid)
+
+  - kunci: periksa-keluaran
+    judul: Periksa setiap keluaran KA sebelum dipakai
+    penjelasan: Pastikan isinya benar, tidak bias atau diskriminatif, tidak berbahaya, dan tidak melanggar hak kekayaan intelektual.
+    catatan: "Panduan menyarankan tiga pertanyaan sebelum memakai KA generatif: apakah ketepatan hasilnya penting, apakah kamu punya keahlian untuk memeriksanya, dan apakah kamu bersedia bertanggung jawab kalau hasilnya keliru."
+    dasar:
+      - Panduan Pemanfaatan Kecerdasan Artifisial untuk Guru, Bab 4 B.2 langkah nomor 2 sampai 5 dan Gambar 4.1
+
+  - kunci: sesuai-level-murid
+    judul: Pastikan teks dari KA mudah dipahami murid
+    penjelasan: Keluaran yang akan dibaca murid harus jelas, tidak ambigu, dan sesuai dengan level bahasa mereka.
+    dasar:
+      - Panduan Pemanfaatan Kecerdasan Artifisial untuk Guru, Bab 4 B.2 langkah nomor 6
+
+  - kunci: cegah-ketergantungan
+    judul: Sesuaikan tugas murid supaya tidak bergantung pada KA
+    penjelasan: Atur strategi, media, dan bentuk tugas agar murid tetap kreatif dan berpikir sendiri.
+    dasar:
+      - Panduan Pemanfaatan Kecerdasan Artifisial untuk Guru, Bab 4 B.5 Penyesuaian proses pembelajaran
+
+  - kunci: evaluasi-dampak-ka
+    judul: Evaluasi rutin dampak pemakaian KA
+    penjelasan: Tinjau efektivitasnya dan risiko ketergantungan, supaya KA benar-benar memberi manfaat.
+    dasar:
+      - Panduan Pemanfaatan Kecerdasan Artifisial untuk Guru, Bab 4 B.6 Evaluasi berkelanjutan

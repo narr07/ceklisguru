@@ -1,0 +1,25 @@
+kunci: masukan-dari-murid
+slug: masukan-dari-murid
+tahap: merefleksi
+judul: Masukan dari murid
+ringkasan: Murid yang kamu ajar langsung dapat menilai pelaksanaan pembelajaranmu. Kalau dilakukan, paling sedikit sekali tiap semester di setiap mata pelajaran.
+ikon: 005-new-message.svg
+terkait: [refleksi-diri, masukan-rekan-dan-kepala-sekolah]
+butir:
+  - kunci: libatkan-murid-menilai
+    judul: Beri murid kesempatan menilai cara kamu mengajar
+    penjelasan: Tujuannya mengembangkan kemandirian dan tanggung jawab murid, serta membangun suasana belajar yang partisipatif dan saling menghargai.
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 16 huruf c dan Pasal 19 ayat 1 dan 2
+
+  - kunci: rencanakan-caranya
+    judul: Rencanakan caranya, misalnya lewat survei, catatan, atau diskusi refleksi
+    penjelasan: Bisa salah satu, atau gabungan dari ketiganya, asalkan direncanakan.
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 19 ayat 4
+
+  - kunci: tiap-mapel-tiap-semester
+    judul: Lakukan paling sedikit sekali tiap semester di setiap mata pelajaran
+    penjelasan: Ketentuan ini berlaku kalau penilaian oleh murid dilaksanakan.
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 19 ayat 3

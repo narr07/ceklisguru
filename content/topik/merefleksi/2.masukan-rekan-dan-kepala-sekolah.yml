@@ -1,0 +1,32 @@
+kunci: masukan-rekan-dan-kepala-sekolah
+slug: masukan-rekan-dan-kepala-sekolah
+tahap: merefleksi
+judul: Masukan dari rekan dan kepala sekolah
+ringkasan: Selain oleh guru sendiri, penilaian proses pembelajaran dapat dilakukan oleh sesama guru dan kepala sekolah. Kalau dilakukan, paling sedikit sekali tiap semester.
+ikon: 038-chatting.svg
+terkait: [refleksi-diri, masukan-dari-murid]
+butir:
+  - kunci: undang-rekan
+    judul: Minta rekan guru menilai perencanaan dan pelaksanaan pembelajaranmu
+    penjelasan: Tujuannya membangun budaya saling belajar, bekerja sama, dan saling mendukung.
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 16 huruf a dan Pasal 17 ayat 1 dan 2
+
+  - kunci: cara-penilaian-rekan
+    judul: Lakukan lewat diskusi, pengamatan kelas, lalu refleksi bersama
+    penjelasan: Diskusikan rencana atau pelaksanaan pembelajaran, amati pembelajarannya, lalu refleksikan hasil diskusi dan pengamatan itu.
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 17 ayat 3 dan 4
+
+  - kunci: supervisi-kepala-sekolah
+    judul: Manfaatkan penilaian dari kepala sekolah
+    penjelasan: Tujuannya membangun budaya reflektif dan memberi umpan balik yang konstruktif, misalnya lewat supervisi akademik dan analisis hasil belajar murid.
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 16 huruf b dan Pasal 18
+
+  - kunci: tindak-lanjuti-umpan-balik
+    judul: Tindak lanjuti umpan balik yang kamu terima
+    penjelasan: Umpan balik dari rekan dan kepala sekolah menjadi bahan untuk memperbaiki rencana dan pelaksanaan pembelajaran berikutnya.
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 18 ayat 4 huruf c
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, C. Merencanakan Pembelajaran dan Asesmen, siklus refleksi dan umpan balik
