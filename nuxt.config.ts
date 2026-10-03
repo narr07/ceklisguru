@@ -21,6 +21,7 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       ],
       link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Alan+Sans:wght@400;500;600;700;800&display=swap' },
@@ -63,6 +64,13 @@ export default defineNuxtConfig({
         commaDangle: 'always-multiline',
       },
     },
+  },
+
+  icon: {
+    // Multi-colored illustrations, rendered with mode="svg" so their colors and theme variables survive
+    customCollections: [
+      { prefix: 'ceklis', dir: './app/assets/icons' },
+    ],
   },
 
   ogImage: {

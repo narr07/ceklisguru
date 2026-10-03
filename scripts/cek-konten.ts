@@ -1,6 +1,6 @@
 // Fails when content would break progress keys or lose its source trail.
 // Nuxt Content checks field types; this checks what spans several files.
-import { readdirSync, readFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { basename, join, relative } from 'node:path'
 import { parse } from 'yaml'
 
@@ -39,6 +39,13 @@ const topik = load('topik')
 checkUnique('kunci tahap', tahap.map(t => ({ file: t.file, value: t.data.kunci })))
 checkUnique('nomor file tahap', tahap.map(t => ({ file: t.file, value: fileNumber(t.file) })))
 checkUnique('kunci topik', topik.map(t => ({ file: t.file, value: t.data.kunci })))
+
+const iconDir = join(import.meta.dir, '..', 'app', 'assets', 'icons')
+for (const { file, data } of [...tahap, ...topik]) {
+  const name = String(data.ikon ?? '')
+  if (!name.startsWith('ceklis:')) errors.push(`${file}: ikon "${name}" harus berformat ceklis:<nama-file>`)
+  else if (!existsSync(join(iconDir, `${name.slice('ceklis:'.length)}.svg`))) errors.push(`${file}: file ikon untuk "${name}" tidak ada di app/assets/icons`)
+}
 
 const tahapKeys = new Set(tahap.map(t => t.data.kunci))
 const topikKeys = new Set(topik.map(t => t.data.kunci))

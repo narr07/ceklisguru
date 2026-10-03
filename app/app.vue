@@ -3,6 +3,8 @@ import { id } from '@nuxt/ui/locale'
 
 const store = useChecklistStore()
 
+useFaviconFromTheme()
+
 onMounted(() => {
   store.load()
 })

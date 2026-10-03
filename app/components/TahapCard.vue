@@ -31,9 +31,10 @@ const next = computed(() => {
     :ui="{ body: 'flex flex-1 flex-col gap-4 p-5 sm:p-5' }"
   >
     <div class="flex items-start gap-3">
-      <AppIcon
+      <UIcon
         :name="tahap.ikon"
-        size="xl"
+        mode="svg"
+        class="app-icon shrink-0 size-10"
       />
       <div class="min-w-0">
         <p
@@ -92,7 +93,6 @@ const next = computed(() => {
       <UBadge
         v-else
         color="neutral"
-        variant="subtle"
         icon="i-lucide-pencil-line"
         label="Sedang disusun"
       />

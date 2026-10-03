@@ -3,7 +3,7 @@ slug: alur-tujuan-pembelajaran
 tahap: merencanakan
 judul: Alur tujuan pembelajaran
 ringkasan: Alur tujuan pembelajaran adalah tujuan-tujuan yang diurutkan dalam satu fase, bukan turunan atau rincian dari tujuan.
-ikon: 015-map.svg
+ikon: ceklis:015-map
 terkait: [tujuan-pembelajaran, isi-dokumen-perencanaan]
 butir:
   - kunci: urutkan-bukan-rinci

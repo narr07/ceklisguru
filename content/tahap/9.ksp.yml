@@ -3,7 +3,7 @@ slug: ksp
 jenis: modul
 nama: Kurikulum Satuan Pendidikan
 ringkasan: Ceklis untuk tim yang menyusun dan meninjau KSP di sekolah.
-ikon: 039-global-education.svg
+ikon: ceklis:039-global-education
 dasar:
   - Panduan Kurikulum Satuan Pendidikan
   - Permendikdasmen 13/2025 (perubahan Permendikbudristek 12/2024 tentang Kurikulum)

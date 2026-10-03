@@ -3,7 +3,7 @@ slug: mengolah-hasil-asesmen
 tahap: menilai
 judul: Mengolah hasil asesmen
 ringkasan: Hasil asesmen diolah secara kuantitatif dan/atau kualitatif dengan membandingkan capaian murid terhadap kriteria ketercapaian tujuan pembelajaran.
-ikon: 035-folder.svg
+ikon: ceklis:035-folder
 terkait: [merencanakan-asesmen, melaporkan-hasil-belajar]
 butir:
   - kunci: pisahkan-formatif-sumatif

@@ -57,9 +57,10 @@ useSeoMeta({
               :to="topikUrl(t, tahapList ?? [])"
               class="group flex h-full items-start gap-4 rounded-2xl border border-default bg-default p-5 transition-colors hover:border-accented"
             >
-              <AppIcon
+              <UIcon
                 :name="t.ikon"
-                size="lg"
+                mode="svg"
+                class="app-icon shrink-0 size-8"
               />
               <div class="min-w-0 flex-1">
                 <h2 class="font-bold text-highlighted group-hover:underline">

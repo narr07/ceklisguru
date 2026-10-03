@@ -35,7 +35,6 @@ function topikOf(kunci: string) {
         v-if="store.hasLegacyProgress"
         class="mb-8"
         color="neutral"
-        variant="subtle"
         icon="i-lucide-info"
         title="Ceklis sudah disusun ulang"
         description="Isinya sekarang mengikuti dokumen resmi Kemendikdasmen, jadi centang dari versi lama tidak bisa dipindahkan. Mulai lagi dari tahap yang kamu perlukan."

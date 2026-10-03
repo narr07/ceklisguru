@@ -33,10 +33,10 @@ function reset() {
     />
 
     <div class="flex items-start gap-4">
-      <AppIcon
+      <UIcon
         :name="icon"
-        size="xl"
-        class="mt-1"
+        mode="svg"
+        class="app-icon shrink-0 size-10 mt-1"
       />
       <div class="min-w-0">
         <p

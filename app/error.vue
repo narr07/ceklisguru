@@ -4,6 +4,8 @@ import { id } from '@nuxt/ui/locale'
 
 const props = defineProps<{ error: NuxtError }>()
 
+useFaviconFromTheme()
+
 const isNotFound = computed(() => props.error.statusCode === 404)
 
 const shown = computed(() => ({

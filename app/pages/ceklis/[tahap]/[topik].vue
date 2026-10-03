@@ -85,7 +85,6 @@ useSeoMeta({
           <UButton
             block
             color="neutral"
-            variant="subtle"
             icon="i-lucide-copy"
             label="Salin ceklis"
             @click="salinCeklis"
@@ -104,9 +103,10 @@ useSeoMeta({
                   :to="topikUrl(t, tahapList ?? [])"
                   class="flex items-center gap-2 rounded-lg p-2 text-sm font-medium text-highlighted hover:bg-elevated"
                 >
-                  <AppIcon
+                  <UIcon
                     :name="t.ikon"
-                    size="sm"
+                    mode="svg"
+                    class="app-icon shrink-0 size-5"
                   />
                   {{ t.judul }}
                 </ULink>
