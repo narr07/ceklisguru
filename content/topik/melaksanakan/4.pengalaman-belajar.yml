@@ -1,0 +1,39 @@
+kunci: pengalaman-belajar
+slug: pengalaman-belajar
+tahap: melaksanakan
+judul: Pengalaman belajar
+ringkasan: Murid mendapat pengalaman belajar memahami, mengaplikasi, dan merefleksi. Pengalaman ini adalah jalan menuju tujuan, bukan hal yang dinilai tersendiri.
+ikon: 021-compass.svg
+terkait: [prinsip-pembelajaran, langkah-pembelajaran]
+butir:
+  - kunci: memahami
+    judul: Ajak murid membangun pemahaman dari berbagai sumber dan konteks
+    penjelasan: Murid aktif mengonstruksi sikap, pengetahuan, dan keterampilan, tidak hanya menerima materi.
+    catatan: "Karakteristik di Panduan: menghubungkan pengetahuan baru dengan yang sudah dimiliki, menstimulasi proses berpikir, menghubungkan dengan kehidupan sehari-hari, memberi kebebasan bereksplorasi dan berkolaborasi, serta menanamkan nilai."
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 10 ayat 2
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Pengalaman Belajar Memahami
+
+  - kunci: mengaplikasi
+    judul: Beri kesempatan menerapkan pengetahuan dalam situasi nyata
+    penjelasan: Murid menghubungkan ide, menganalisis, dan membangun solusi untuk masalah konkret. Hasilnya bisa berupa produk atau kinerja.
+    contoh: "Dari contoh di Paparan: murid mengunjungi sungai, mewawancarai warga, lalu mengembangkan proyek pengelolaan sampah di sekolah, seperti tempat sampah terpilah, ecobrick, atau bank sampah."
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 10 ayat 3
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Pengalaman Belajar Mengaplikasi
+      - Paparan Pembelajaran Mendalam, contoh Langkah-Langkah Pembelajaran
+
+  - kunci: merefleksi
+    judul: Bimbing murid mengevaluasi dan memaknai proses serta hasil belajarnya
+    penjelasan: Murid belajar mengatur dirinya sendiri, mulai dari merencanakan, menjalankan, memantau, sampai mengevaluasi cara belajarnya.
+    contoh: "Dari contoh di Paparan: murid mempresentasikan proyeknya, menerima umpan balik dari teman, guru, dan narasumber, menulis jurnal refleksi, lalu menilai sendiri ketercapaian tujuannya."
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 10 ayat 4
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Pengalaman Belajar Merefleksi
+      - Paparan Pembelajaran Mendalam, contoh Langkah-Langkah Pembelajaran
+
+  - kunci: jalan-bukan-nilai
+    judul: Perlakukan pengalaman belajar sebagai jalan, bukan bahan penilaian
+    penjelasan: Yang dinilai adalah ketercapaian tujuan pembelajaran. Pengalaman memahami, mengaplikasi, dan merefleksi adalah cara murid mencapainya.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, C. Pengalaman Belajar

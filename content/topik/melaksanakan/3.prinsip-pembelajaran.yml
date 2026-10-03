@@ -1,0 +1,38 @@
+kunci: prinsip-pembelajaran
+slug: prinsip-pembelajaran
+tahap: melaksanakan
+judul: Prinsip pembelajaran
+ringkasan: Pembelajaran dilaksanakan dengan prinsip berkesadaran, bermakna, dan menggembirakan, melalui olah pikir, olah hati, olah rasa, dan olah raga.
+ikon: 049-table-lamp.svg
+terkait: [suasana-belajar, pengalaman-belajar, langkah-pembelajaran]
+butir:
+  - kunci: berkesadaran
+    judul: Bantu murid memahami tujuan belajarnya
+    penjelasan: Pembelajaran berkesadaran membuat murid paham tujuannya, termotivasi, aktif belajar, dan mampu mengatur dirinya sendiri.
+    contoh: "Contoh pelaksanaan di Panduan: memberi pertanyaan pemantik yang memacu rasa ingin tahu, memastikan murid tahu apa yang akan dicapai, menunjukkan manfaat hasil belajar bagi murid, dan menjadi pendengar aktif."
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 3 ayat 2
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Prinsip Berkesadaran
+
+  - kunci: bermakna
+    judul: Kaitkan pelajaran dengan kehidupan nyata murid
+    penjelasan: Pembelajaran bermakna terjadi ketika murid menerapkan yang dipelajari dan membangun pengetahuan baru dalam kehidupan nyata, secara kontekstual, atau terkait bidang ilmu lain.
+    contoh: "Contoh pelaksanaan di Panduan: mengembangkan pembelajaran dari permasalahan di sekitar murid, dan melibatkan murid dalam merancang pembelajaran, misalnya memilih projek atau menentukan isu yang dibahas."
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 3 ayat 3
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Prinsip Bermakna
+
+  - kunci: menggembirakan
+    judul: Hadirkan suasana yang positif, menantang, menyenangkan, dan memotivasi
+    penjelasan: Rasa senang membantu murid terhubung secara emosional sehingga lebih mudah memahami, mengingat, dan menerapkan pengetahuan.
+    contoh: "Contoh pelaksanaan di Panduan: merancang kegiatan dengan jawaban terbuka yang memancing pemikiran murid, memfasilitasi diskusi atau simulasi, serta memberi dukungan dan tantangan yang sesuai kemampuan murid."
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 3 ayat 4
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Prinsip Menggembirakan
+
+  - kunci: olah-utuh
+    judul: Libatkan olah pikir, olah hati, olah rasa, dan olah raga
+    penjelasan: Pembelajaran dilaksanakan secara holistik dan terpadu, dalam suasana saling memuliakan.
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 3 ayat 1
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, B. Prinsip Pembelajaran

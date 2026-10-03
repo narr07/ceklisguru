@@ -1,0 +1,42 @@
+kunci: melayani-keragaman-murid
+slug: melayani-keragaman-murid
+tahap: melaksanakan
+judul: Melayani keragaman murid
+ringkasan: Kompetensi pedagogik guru mencakup pembelajaran yang responsif terhadap keragaman latar belakang, kebutuhan, dan potensi murid.
+ikon: 048-globe.svg
+terkait: [diferensiasi-dan-asesmen-formatif, peran-guru-di-kelas]
+butir:
+  - kunci: responsif-keragaman
+    judul: Pakai berbagai model pembelajaran untuk murid yang beragam
+    penjelasan: Sesuaikan dengan latar belakang, kebutuhan, dan potensi murid di kelasmu.
+    catatan: "Contoh model di Panduan: pembelajaran berbasis projek, berbasis masalah, inkuiri, berbasis permainan, berbasis genre, dan kolaboratif."
+    dasar:
+      - Permendikdasmen 21/2025 Pasal 8 ayat 1 huruf b
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Contoh Praktik Pedagogis
+
+  - kunci: kearifan-lokal
+    judul: Manfaatkan potensi lingkungan dan kearifan lokal sebagai sumber belajar
+    penjelasan: Pilih strategi yang sesuai karakteristik murid dengan memakai apa yang ada di sekitar sekolah.
+    dasar:
+      - Permendikdasmen 21/2025 Pasal 8 ayat 1 huruf e
+
+  - kunci: teknologi-kritis
+    judul: Pakai teknologi secara kritis dan kreatif
+    penjelasan: Teknologi dipakai untuk memperluas akses, memperdalam pemahaman, dan mendukung literasi digital murid.
+    contoh: "Contoh di Panduan: aplikasi atau media digital, kecerdasan artifisial sebagai alat bantu, teknologi asistif untuk murid berkebutuhan khusus, dan platform seperti Rumah Pendidikan."
+    dasar:
+      - Permendikdasmen 21/2025 Pasal 8 ayat 1 huruf d
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Contoh Pemanfaatan Teknologi Digital
+
+  - kunci: komunikasi-inklusif
+    judul: Berkomunikasi secara inklusif dan empatik
+    penjelasan: Sampaikan lewat lisan, tulisan, atau isyarat dengan memperhatikan keragaman dan kebutuhan murid.
+    dasar:
+      - Permendikdasmen 21/2025 Pasal 8 ayat 3 huruf a
+
+  - kunci: akomodasi-kebutuhan-khusus
+    judul: Beri akomodasi bagi murid berkebutuhan khusus
+    penjelasan: Prinsip dan pengalaman belajar tetap berlaku, tapi caranya disesuaikan dengan jenis dan tingkat kebutuhan tiap murid.
+    catatan: Panduan merujuk ke panduan tersendiri tentang akomodasi pembelajaran mendalam pada pendidikan khusus untuk contoh lengkapnya.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, catatan Prinsip Pembelajaran dan catatan Pengalaman Belajar
