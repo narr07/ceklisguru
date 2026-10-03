@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
+    '@nuxt/eslint',
     '@nuxt/ui',
     '@pinia/nuxt',
     'nuxt-studio',
@@ -10,22 +11,6 @@ export default defineNuxtConfig({
   ],
 
   devtools: { enabled: true },
-  compatibilityDate: '2024-04-03',
-
-  site: {
-    url: 'https://ceklisguru.permadi.dev',
-    name: 'CeklisGuru'
-  },
-
-  ogImage: {
-    zeroRuntime: true,
-    defaults: {
-      component: 'Brutalist',
-    },
-    runtimeCacheDir: '.og-cache',
-  },
-
-  css: ['~/assets/css/main.css'],
 
   app: {
     head: {
@@ -34,7 +19,6 @@ export default defineNuxtConfig({
       meta: [
         { name: 'description', content: 'Platform checklist interaktif untuk guru Indonesia meningkatkan kualitas pembelajaran dengan praktik terbaik yang terstruktur.' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'theme-color', content: '#0d9488' },
       ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -44,11 +28,23 @@ export default defineNuxtConfig({
     },
   },
 
-  colorMode: {
-    preference: 'light',
-    fallback: 'light',
-    classSuffix: '',
+  css: ['~/assets/css/main.css'],
+
+  site: {
+    url: 'https://ceklisguru.permadi.dev',
+    name: 'CeklisGuru',
   },
+
+  colorMode: {
+    preference: 'system',
+    fallback: 'light',
+  },
+
+  routeRules: {
+    '/': { prerender: true },
+    '/kategori/**': { prerender: true },
+  },
+  compatibilityDate: '2024-04-03',
 
   nitro: {
     prerender: {
@@ -58,9 +54,19 @@ export default defineNuxtConfig({
     },
   },
 
-  routeRules: {
-    '/': { prerender: true },
-    '/kategori/**': { prerender: true },
+  eslint: {
+    config: {
+      stylistic: {
+        indent: 2,
+        quotes: 'single',
+        semi: false,
+        commaDangle: 'always-multiline',
+      },
+    },
+  },
+
+  ogImage: {
+    zeroRuntime: true,
   },
 
   studio: {
