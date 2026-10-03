@@ -1,0 +1,32 @@
+kunci: memahami-materi
+slug: memahami-materi
+tahap: memahami
+judul: Memahami materi
+ringkasan: Kuasai materi yang kamu ajarkan dan pahami karakteristiknya, mulai dari ruang lingkup minimalnya di Standar Isi.
+ikon: 046-stationery.svg
+terkait: [memahami-capaian-pembelajaran, tujuan-pembelajaran]
+butir:
+  - kunci: kuasai-disiplin-ilmu
+    judul: Kuasai disiplin ilmu yang kamu ajarkan
+    penjelasan: Kompetensi profesional guru adalah penguasaan materi pelajaran secara mendalam dan kontekstual.
+    dasar:
+      - Permendikdasmen 21/2025 Pasal 5 ayat 7 dan Pasal 8 ayat 4 huruf b
+
+  - kunci: ruang-lingkup-minimal
+    judul: Kenali ruang lingkup materi minimal di Standar Isi
+    penjelasan: Standar Isi adalah kriteria minimal ruang lingkup materi untuk mencapai kompetensi lulusan, dan menjadi bahan kajian dalam muatan pembelajaran.
+    dasar:
+      - Permendikdasmen 12/2025 (Standar Isi) Pasal 1 angka 1 dan Pasal 2 ayat 1 dan 2
+
+  - kunci: analisis-materi
+    judul: Analisis karakteristik materi sebelum mengajarkannya
+    penjelasan: Lihat jenis pengetahuannya, relevansinya dengan kehidupan nyata murid, tingkat kesulitannya, strukturnya, dan nilai atau karakter yang bisa diintegrasikan.
+    contoh: "Dari contoh di Paparan: materi ekosistem mencakup pengetahuan faktual, konseptual, prosedural, dan metakognitif, dan dirancang relevan dengan kehidupan nyata, seperti dampak aktivitas manusia terhadap ekosistem sungai."
+    dasar:
+      - Paparan Pembelajaran Mendalam, Perencanaan bagian Identifikasi Materi Pelajaran
+
+  - kunci: materi-esensial
+    judul: Fokus pada materi esensial
+    penjelasan: Materi esensial adalah konsep inti dan informasi yang dianggap penting untuk dipelajari murid.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, B.1 Merumuskan Tujuan Pembelajaran bagian Lingkup materi

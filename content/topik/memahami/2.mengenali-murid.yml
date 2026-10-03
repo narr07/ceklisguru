@@ -1,0 +1,40 @@
+kunci: mengenali-murid
+slug: mengenali-murid
+tahap: memahami
+judul: Mengenali murid
+ringkasan: Sebelum merancang pembelajaran, kenali kesiapan, kebutuhan, dan potensi murid yang akan kamu ajar.
+ikon: 053-user-profile.svg
+terkait: [memahami-capaian-pembelajaran, merencanakan-asesmen]
+butir:
+  - kunci: kesiapan-murid
+    judul: Identifikasi kesiapan murid sebelum belajar
+    penjelasan: Misalnya pengetahuan awal, minat, latar belakang, dan kebutuhan belajarnya.
+    contoh: "Dari contoh di Paparan: murid memiliki pengetahuan dasar yang bervariasi tentang isu lingkungan, perlu memiliki kesadaran akan perannya terhadap keseimbangan ekosistem, dan menunjukkan minat tinggi pada kegiatan berbasis proyek."
+    dasar:
+      - Paparan Pembelajaran Mendalam, Perencanaan bagian Identifikasi Peserta Didik
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, C.1 Perencanaan Pembelajaran
+
+  - kunci: potensi-dan-konteks
+    judul: Pahami potensi dan kebutuhan belajar murid dalam konteks lokal
+    penjelasan: Kaitkan dengan karakteristik materi yang akan dipelajari dan lingkungan tempat murid tinggal.
+    dasar:
+      - Permendikdasmen 21/2025 Pasal 8 ayat 4 huruf c
+
+  - kunci: asesmen-murid-khusus
+    judul: Untuk murid berkebutuhan khusus, mulai dari asesmen fungsional atau diagnostik
+    penjelasan: Hasilnya dimasukkan ke perencanaan pembelajaran sebagai profil awal murid.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, C.1 Perencanaan Pembelajaran, Catatan untuk pendidikan khusus
+
+  - kunci: kemampuan-fondasi
+    judul: Kalau mengajar PAUD atau kelas awal SD, perhatikan enam kemampuan fondasi
+    penjelasan: Kemampuan fondasi bukan CP baru, tapi jembatan supaya murid PAUD siap melanjutkan belajar di SD.
+    catatan: "Enam kemampuan fondasi di Panduan: mengenal nilai agama dan budi pekerti, kematangan emosi, keterampilan sosial dan bahasa, pemaknaan belajar yang positif, keterampilan motorik dan perawatan diri, serta kematangan kognitif seperti dasar literasi dan numerasi."
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, A. Menganalisis Capaian Pembelajaran, Kesinambungan pembelajaran dari PAUD ke SD
+
+  - kunci: siapkan-pengayaan
+    judul: Siapkan pengayaan bagi murid yang kebutuhannya di atas CP
+    penjelasan: CP disusun untuk kemampuan murid pada umumnya. Murid yang sudah melampauinya bisa diberi pengayaan atau pendalaman.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, A. Menganalisis Capaian Pembelajaran

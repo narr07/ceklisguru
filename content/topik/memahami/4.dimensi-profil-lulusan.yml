@@ -1,0 +1,32 @@
+kunci: dimensi-profil-lulusan
+slug: dimensi-profil-lulusan
+tahap: memahami
+judul: Dimensi profil lulusan
+ringkasan: Standar Kompetensi Lulusan menetapkan delapan dimensi profil lulusan yang harus dikuasai murid di akhir setiap jenjang.
+ikon: 052-trophy.svg
+terkait: [memahami-capaian-pembelajaran, tujuan-pembelajaran]
+butir:
+  - kunci: kenali-delapan-dimensi
+    judul: Kenali delapan dimensi profil lulusan
+    penjelasan: Keimanan dan ketakwaan terhadap Tuhan Yang Maha Esa, kewargaan, penalaran kritis, kreativitas, kolaborasi, kemandirian, kesehatan, dan komunikasi.
+    dasar:
+      - Permendikdasmen 10/2025 (Standar Kompetensi Lulusan) Pasal 4
+
+  - kunci: pilih-yang-relevan
+    judul: Pilih dimensi yang relevan dengan tujuan dan mata pelajaranmu
+    penjelasan: Tidak semua dimensi harus dipilih dalam satu pembelajaran.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, C.1 Perencanaan Pembelajaran
+      - Paparan Pembelajaran Mendalam, Perencanaan bagian Dimensi Profil Lulusan
+
+  - kunci: terintegrasi
+    judul: Integrasikan dimensi profil lulusan dalam proses pembelajaran
+    penjelasan: Dimensi profil lulusan diupayakan menyatu dengan pembelajaran, bukan menjadi bagian yang terpisah.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, C.1 Perencanaan Pembelajaran
+
+  - kunci: alur-perkembangan
+    judul: Lihat tahap perkembangan murid di Alur Perkembangan Kompetensi
+    penjelasan: Setiap dimensi dirinci per jenjang dalam tiga tahap, yaitu berkembang, cakap, dan mahir. Tahap cakap adalah standar kelulusan, sedangkan berkembang berarti masih menuju standar.
+    dasar:
+      - Kepka BSKAP 058/H/KR/2025 tentang Alur Perkembangan Kompetensi, Diktum dan Lampiran
