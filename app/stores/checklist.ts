@@ -23,22 +23,6 @@ export const useChecklistStore = defineStore('checklist', () => {
     return Object.values(progress.value[categoryId]).filter(Boolean).length
   })
 
-  const getTotalProgress = computed(() => (totalItems: number = 61): number => {
-    let completed = 0
-    Object.values(progress.value).forEach(category => {
-      completed += Object.values(category).filter(Boolean).length
-    })
-    return totalItems > 0 ? Math.round((completed / totalItems) * 100) : 0
-  })
-
-  const getTotalCompleted = computed(() => (): number => {
-    let completed = 0
-    Object.values(progress.value).forEach(category => {
-      completed += Object.values(category).filter(Boolean).length
-    })
-    return completed
-  })
-
   // Actions
   function toggleItem(categoryId: string, itemId: string) {
     if (!progress.value[categoryId]) {
@@ -74,18 +58,13 @@ export const useChecklistStore = defineStore('checklist', () => {
   }
 
   function resetCategoryProgress(categoryId: string) {
-    if (progress.value[categoryId]) {
-      delete progress.value[categoryId]
-      saveToLocalStorage()
-    }
+    resetMultipleCategoriesProgress([categoryId])
   }
 
   function resetMultipleCategoriesProgress(categoryIds: string[]) {
-    categoryIds.forEach(id => {
-      if (progress.value[id]) {
-        delete progress.value[id]
-      }
-    })
+    progress.value = Object.fromEntries(
+      Object.entries(progress.value).filter(([id]) => !categoryIds.includes(id)),
+    )
     saveToLocalStorage()
   }
 
@@ -99,8 +78,6 @@ export const useChecklistStore = defineStore('checklist', () => {
     getProgress,
     getCategoryProgress,
     getCategoryCompleted,
-    getTotalProgress,
-    getTotalCompleted,
     toggleItem,
     loadFromLocalStorage,
     saveToLocalStorage,

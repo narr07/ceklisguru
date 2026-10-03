@@ -42,13 +42,13 @@ const labelSize = computed(() => ({
     >
       <span
         v-if="showCount && total > 0"
-        :class="[labelSize, 'text-neutral-500 font-medium']"
+        :class="[labelSize, 'text-muted font-medium']"
       >
         {{ completed }}/{{ total }} selesai
       </span>
       <span
         v-if="showLabel"
-        :class="[labelSize, 'font-bold text-primary-600 ml-auto']"
+        :class="[labelSize, 'font-bold text-highlighted ml-auto']"
       >
         {{ progressValue }}%
       </span>

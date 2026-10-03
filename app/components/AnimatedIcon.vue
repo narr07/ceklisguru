@@ -83,15 +83,17 @@ const sizeClass = computed(() => {
 </script>
 
 <template>
-  <img
-    v-if="iconSrc"
-    :src="iconSrc"
-    :alt="icon"
-    class="object-contain inline-block shrink-0 select-none"
+  <!-- <use> keeps the file cached like <img>, but lets CSS variables reach the icon's accent color -->
+  <svg
+    class="app-icon inline-block shrink-0 select-none"
     :class="sizeClass"
-    loading="lazy"
-  />
-  <span v-else class="inline-block shrink-0" :class="sizeClass">
-    {{ icon }}
-  </span>
+    aria-hidden="true"
+    focusable="false"
+  >
+    <use
+      :href="`${iconSrc}#icon`"
+      width="100%"
+      height="100%"
+    />
+  </svg>
 </template>

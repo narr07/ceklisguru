@@ -1,80 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 @import "@nuxt/ui";
 
 @theme {
-  --font-family-sans: 'Alan Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-/* Base resets & typography */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+  --font-sans: 'Alan Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: var(--font-family-sans);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #ffffff;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
-/* Progress bar - yellow/yellow solid fill */
-.progress-bar-fill {
-  background-color: #f59e0b;
-}
-
-.dark .progress-bar-fill {
-  background-color: #fbbf24;
-}
-
-/* Structural Card transition */
-.category-card {
-  transition: border-color 0.2s ease, transform 0.15s ease;
-}
-
-.category-card:hover {
-  transform: translateY(-2px);
-}
-
-/* Checklist item completed */
-.checklist-title-completed {
-  text-decoration: line-through;
-  opacity: 0.5;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #d4d4d8;
-  border-radius: 3px;
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  background: #3f3f46;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #a1a1aa;
-}
-
-/* Tooltip typography - normal weight */
-[role="tooltip"],
-[data-reka-popper-content],
-[data-radix-popper-content-wrapper],
-.u-tooltip {
-  font-weight: 400 !important;
+/* Icons in public/icon read these through <use>: accent follows the chosen primary, ink and surface follow the color mode */
+.app-icon {
+  --icon-accent: var(--ui-primary);
+  --icon-surface: var(--ui-bg);
+  fill: var(--ui-text-highlighted);
 }

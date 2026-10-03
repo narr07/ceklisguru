@@ -32,14 +32,14 @@ const total = computed(() => subcategory.value?.items.length ?? 0)
 // SEO
 useHead({
   title: computed(() => subcategory.value
-    ? `${subcategory.value.name} — ${subcategory.value.parentName} — CeklisGuru`
-    : 'Checklist — CeklisGuru',
+    ? `${subcategory.value.name} · ${subcategory.value.parentName} · CeklisGuru`
+    : 'Ceklis · CeklisGuru',
   ),
   meta: [
     {
       name: 'description',
       content: computed(() => subcategory.value
-        ? `${subcategory.value.description} — ${subcategory.value.items.length} checklist praktik terbaik.`
+        ? `${subcategory.value.description} ${subcategory.value.items.length} butir ceklis.`
         : '',
       ),
     },
@@ -48,28 +48,19 @@ useHead({
 </script>
 
 <template>
-  <div class="min-h-screen bg-white">
+  <div class="min-h-screen bg-default">
     <AppHeader />
 
     <UContainer class="max-w-3xl py-8 sm:py-10">
-      <!-- Error State -->
-      <div v-if="error || !subcategory" class="text-center py-20">
-        <p class="text-5xl mb-4">😕</p>
-        <h1 class="text-2xl font-bold text-zinc-800 mb-2">
-          Sub-topik tidak ditemukan
-        </h1>
-        <UButton
-          :to="`/kategori/${slug}`"
-          color="primary"
-          size="md"
-          class="font-semibold rounded-xl mt-4"
-        >
-          ← Kembali ke Kategori
-        </UButton>
-      </div>
+      <UEmpty
+        v-if="error || !subcategory"
+        icon="i-lucide-search-x"
+        title="Sub-topik tidak ditemukan"
+        description="Alamatnya mungkin salah ketik, atau sub-topiknya sudah diganti."
+        :actions="[{ label: 'Kembali ke kategori', icon: 'i-lucide-arrow-left', to: `/kategori/${slug}` }]"
+      />
 
       <template v-else>
-        <!-- Header with breadcrumb + back to parent -->
         <CategoryHeader
           :category="subcategory as unknown as SubCategory"
           :parent-name="subcategory.parentName"
@@ -79,9 +70,8 @@ useHead({
           :total="total"
         />
 
-        <!-- Checklist items -->
-        <section :aria-label="`Checklist ${subcategory.name}`">
-          <ul class="space-y-3" role="group">
+        <section :aria-label="`Ceklis ${subcategory.name}`">
+          <ul class="space-y-3">
             <ChecklistItem
               v-for="item in subcategory.items"
               :key="item.id"
@@ -91,19 +81,17 @@ useHead({
           </ul>
         </section>
 
-        <!-- Bottom nav -->
-        <div class="mt-10 pt-6 border-t border-zinc-200 flex justify-between items-center">
+        <div class="mt-10 flex items-center justify-between border-t border-default pt-6">
           <UButton
             :to="`/kategori/${subcategory.parentSlug}`"
             color="neutral"
             variant="ghost"
             size="sm"
-            class="font-semibold text-zinc-600 hover:text-yellow-600 p-0 hover:bg-transparent"
-          >
-            ← {{ subcategory.parentName }}
-          </UButton>
-          <p class="text-sm font-medium text-zinc-400">
-            {{ total }} checklist
+            icon="i-lucide-arrow-left"
+            :label="subcategory.parentName"
+          />
+          <p class="text-sm font-medium text-muted">
+            {{ total }} butir
           </p>
         </div>
       </template>

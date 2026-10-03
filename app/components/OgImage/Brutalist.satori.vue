@@ -5,7 +5,7 @@ defineProps({
   description: { type: String, required: false, default: 'Platform checklist interaktif untuk guru Indonesia meningkatkan kualitas pembelajaran.' },
   subtitle: { type: String, required: false, default: 'CeklisGuru' },
   accent: { type: String, required: false, default: '#facc15' },
-});
+})
 </script>
 
 <template>
@@ -29,7 +29,11 @@ defineProps({
       <div class="absolute bottom-3 left-3 w-4 h-4 border-l-4 border-b-4 border-black dark:border-neutral-300" />
 
       <div class="relative max-w-[85%]">
-        <p v-if="subtitle" class="text-base font-mono uppercase tracking-[0.3em] text-neutral-500 mb-2" style="display: block; line-clamp: 1; text-overflow: ellipsis;">
+        <p
+          v-if="subtitle"
+          class="text-base font-mono uppercase tracking-[0.3em] text-neutral-500 mb-2"
+          style="display: block; line-clamp: 1; text-overflow: ellipsis;"
+        >
           {{ subtitle }}
         </p>
         <h1

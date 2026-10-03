@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { BreadcrumbItem } from '@nuxt/ui'
 import type { Category, SubCategory } from '~/types/checklist'
 
 interface Props {
@@ -28,108 +29,103 @@ const emit = defineEmits<{
 
 const store = useChecklistStore()
 const isSubCategory = computed(() => 'parentSlug' in props.category)
+const confirmOpen = ref(false)
+
+const breadcrumb = computed<BreadcrumbItem[]>(() => [
+  { label: 'Beranda', icon: 'i-lucide-house', to: '/' },
+  ...(isSubCategory.value && props.parentSlug && props.parentName
+    ? [{ label: props.parentName, to: `/kategori/${props.parentSlug}` }]
+    : []),
+  { label: props.category.name },
+])
 
 function handleReset() {
   if (props.subCategoryIds.length > 0) {
     store.resetMultipleCategoriesProgress(props.subCategoryIds)
-  } else {
+  }
+  else {
     store.resetCategoryProgress(props.category.id)
   }
+  confirmOpen.value = false
   emit('reset')
 }
 </script>
 
 <template>
-  <div class="relative overflow-hidden rounded-2xl border border-zinc-200 bg-white p-6 sm:p-8 mb-6 sm:mb-8 shadow-xs">
-    <!-- Background decoration -->
-    <div class="absolute top-0 right-0 p-4 opacity-10 pointer-events-none select-none" aria-hidden="true">
-      <AnimatedIcon :icon="category.icon" class="w-28 h-28 sm:w-36 sm:h-36" />
+  <div class="relative mb-6 overflow-hidden rounded-2xl border border-default bg-default p-6 shadow-xs sm:mb-8 sm:p-8">
+    <div
+      class="pointer-events-none absolute top-0 right-0 p-4 opacity-10 select-none"
+      aria-hidden="true"
+    >
+      <AnimatedIcon
+        :icon="category.icon"
+        size="w-28 h-28 sm:w-36 sm:h-36"
+      />
     </div>
 
-    <!-- Breadcrumb navigation -->
-    <nav class="flex items-center gap-1.5 text-xs font-medium mb-4 flex-wrap text-zinc-500" aria-label="Breadcrumb">
-      <NuxtLink
-        to="/"
-        class="hover:text-zinc-900 transition-colors"
-      >
-        Beranda
-      </NuxtLink>
-      <span class="opacity-40">/</span>
+    <UBreadcrumb
+      :items="breadcrumb"
+      class="mb-5"
+    />
 
-      <!-- If sub-category: show parent link -->
-      <template v-if="isSubCategory && parentSlug && parentName">
-        <NuxtLink
-          :to="`/kategori/${parentSlug}`"
-          class="hover:text-zinc-900 transition-colors"
-        >
-          {{ parentName }}
-        </NuxtLink>
-        <span class="opacity-40">/</span>
-        <span class="text-zinc-900 font-semibold">{{ category.name }}</span>
-      </template>
-
-      <!-- If top-level category page -->
-      <template v-else>
-        <span class="text-zinc-900 font-semibold">{{ category.name }}</span>
-      </template>
-    </nav>
-
-    <!-- Back Button -->
-    <UButton
-      :to="isSubCategory && parentSlug ? `/kategori/${parentSlug}` : '/'"
-      id="back-to-parent"
-      color="neutral"
-      variant="ghost"
-      size="sm"
-      class="mb-5 font-semibold text-zinc-700 hover:text-yellow-600 p-0 hover:bg-transparent"
-    >
-      ← {{ isSubCategory && parentName ? `Kembali ke ${parentName}` : 'Kembali ke Beranda' }}
-    </UButton>
-
-    <!-- Title -->
-    <div class="flex items-center gap-3 mb-2">
-      <AnimatedIcon :icon="category.icon" size="xl" />
-      <h1 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 leading-tight">
+    <div class="mb-2 flex items-center gap-3">
+      <AnimatedIcon
+        :icon="category.icon"
+        size="xl"
+      />
+      <h1 class="text-2xl leading-tight font-extrabold text-highlighted sm:text-3xl">
         {{ category.name }}
       </h1>
     </div>
-    <p class="text-zinc-600 mb-5 text-sm sm:text-base max-w-2xl">
+    <p class="mb-5 max-w-2xl text-sm text-muted sm:text-base">
       {{ category.description }}
     </p>
 
-    <!-- Progress Summary & Reset Button -->
-    <div class="flex items-center justify-between gap-4 mb-4 flex-wrap">
+    <div class="mb-4 flex flex-wrap items-center justify-between gap-4">
       <div class="flex items-center gap-3">
-        <div class="text-sm font-medium text-zinc-600">
-          <span class="text-2xl font-extrabold text-yellow-600">{{ completed }}</span>
-          <span class="text-zinc-400">/{{ total }}</span>
-          <span class="ml-1">selesai</span>
-        </div>
+        <p class="text-sm font-medium text-muted">
+          <span class="text-2xl font-extrabold text-highlighted">{{ completed }}</span>
+          <span>/{{ total }} selesai</span>
+        </p>
         <UBadge
           v-if="progress === 100"
-          color="primary"
-          variant="soft"
-          size="md"
-          class="font-bold flex items-center gap-1"
-        >
-          <AnimatedIcon icon="🎉" size="xs" />
-          <span>Selesai!</span>
-        </UBadge>
+          color="neutral"
+          variant="subtle"
+          icon="i-lucide-party-popper"
+          label="Selesai"
+        />
       </div>
 
-      <!-- Reset button -->
-      <UButton
+      <UModal
         v-if="allowReset && completed > 0"
-        color="error"
-        variant="soft"
-        size="xs"
-        class="rounded-xl font-medium cursor-pointer"
-        title="Reset centang pada sub-topik ini"
-        @click="handleReset"
+        v-model:open="confirmOpen"
+        :title="`Hapus semua centang di ${category.name}?`"
+        :description="`${completed} centang akan hilang dari perangkat ini dan tidak bisa dikembalikan.`"
       >
-        <AnimatedIcon icon="🔄" size="xs" />
-        <span>Reset Centang</span>
-      </UButton>
+        <UButton
+          color="error"
+          variant="soft"
+          size="xs"
+          icon="i-lucide-rotate-ccw"
+          label="Hapus centang"
+        />
+
+        <template #footer>
+          <div class="flex w-full justify-end gap-2">
+            <UButton
+              color="neutral"
+              variant="ghost"
+              label="Batal"
+              @click="confirmOpen = false"
+            />
+            <UButton
+              color="error"
+              label="Hapus centang"
+              @click="handleReset"
+            />
+          </div>
+        </template>
+      </UModal>
     </div>
 
     <ProgressBar

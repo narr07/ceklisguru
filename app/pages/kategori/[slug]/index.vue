@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Category, SubCategory } from '~/types/checklist'
+import type { Category } from '~/types/checklist'
 
 const route = useRoute()
 const slug = computed(() => route.params.slug as string)
@@ -8,8 +8,8 @@ const { data: category, error } = await useAsyncData(`category-${slug.value}`, (
   queryCollection('categories').where('slug', '=', slug.value).first(),
 )
 
-const { data: subCategories } = await useAsyncData(`subcats-${slug.value}`, () =>
-  queryCollection('subcategories').where('parentSlug', '=', slug.value).order('stem', 'ASC').all(),
+const { data: subCategories } = await useAsyncData(`subcats-${slug.value}`, async () =>
+  (await queryCollection('subcategories').where('parentSlug', '=', slug.value).all()).sort(byFileNumber),
 )
 
 if (!category.value && !error.value) {
@@ -19,10 +19,10 @@ if (!category.value && !error.value) {
 const store = useChecklistStore()
 
 const totalItems = computed(() =>
-  (subCategories.value ?? []).reduce((sum: number, sc: any) => sum + sc.items.length, 0),
+  (subCategories.value ?? []).reduce((sum, sc) => sum + sc.items.length, 0),
 )
 const completedItems = computed(() =>
-  (subCategories.value ?? []).reduce((sum: number, sc: any) => sum + store.getCategoryCompleted(sc.id), 0),
+  (subCategories.value ?? []).reduce((sum, sc) => sum + store.getCategoryCompleted(sc.id), 0),
 )
 const progress = computed(() =>
   totalItems.value > 0 ? Math.round((completedItems.value / totalItems.value) * 100) : 0,
@@ -31,8 +31,8 @@ const progress = computed(() =>
 // SEO
 useHead({
   title: computed(() => category.value
-    ? `${category.value.name} — CeklisGuru`
-    : 'Kategori — CeklisGuru',
+    ? `${category.value.name} · CeklisGuru`
+    : 'Kategori · CeklisGuru',
   ),
   meta: [
     {
@@ -44,28 +44,19 @@ useHead({
 </script>
 
 <template>
-  <div class="min-h-screen bg-white">
+  <div class="min-h-screen bg-default">
     <AppHeader />
 
     <UContainer class="max-w-4xl py-8 sm:py-10">
-      <!-- Error State -->
-      <div v-if="error || !category" class="text-center py-20">
-        <p class="text-5xl mb-4">😕</p>
-        <h1 class="text-2xl font-bold text-zinc-800 mb-2">
-          Kategori tidak ditemukan
-        </h1>
-        <UButton
-          to="/"
-          color="primary"
-          size="md"
-          class="font-semibold rounded-xl mt-4"
-        >
-          ← Kembali ke Beranda
-        </UButton>
-      </div>
+      <UEmpty
+        v-if="error || !category"
+        icon="i-lucide-search-x"
+        title="Kategori tidak ditemukan"
+        description="Alamatnya mungkin salah ketik, atau kategorinya sudah diganti."
+        :actions="[{ label: 'Kembali ke Beranda', icon: 'i-lucide-arrow-left', to: '/' }]"
+      />
 
       <template v-else>
-        <!-- Header with breadcrumb -->
         <CategoryHeader
           :category="category as unknown as Category"
           :progress="progress"
@@ -74,49 +65,56 @@ useHead({
           :sub-category-ids="(subCategories ?? []).map(sc => sc.id)"
         />
 
-        <!-- Sub-category grid -->
         <section :aria-label="`Sub-topik ${category.name}`">
-          <h2 class="text-base font-bold text-zinc-700 mb-4 flex items-center gap-2">
-            <span class="w-1.5 h-5 bg-yellow-500 rounded-full inline-block" aria-hidden="true" />
+          <h2 class="mb-4 flex items-center gap-2 text-base font-bold text-highlighted">
+            <span
+              class="inline-block h-5 w-1.5 rounded-full bg-primary"
+              aria-hidden="true"
+            />
             {{ subCategories?.length ?? 0 }} Sub-topik
           </h2>
 
           <div
             v-if="subCategories?.length"
-            class="grid grid-cols-1 sm:grid-cols-2 gap-4"
+            class="grid grid-cols-1 gap-4 sm:grid-cols-2"
           >
             <NuxtLink
               v-for="sc in subCategories"
+              :id="`subcat-card-${sc.id}`"
               :key="sc.id"
               :to="`/kategori/${category.slug}/${sc.slug}`"
-              :id="`subcat-card-${sc.id}`"
-              class="group flex items-start gap-4 p-5 rounded-2xl border bg-white border-zinc-200 hover:border-zinc-300 transition-all duration-200 cursor-pointer shadow-xs"
-              :class="[
-                store.getCategoryProgress(sc.id, sc.items.length) === 100
-                  ? 'border-yellow-400 bg-yellow-50/30'
-                  : ''
-              ]"
+              class="group flex items-start gap-4 rounded-2xl border bg-default p-5 shadow-xs transition-colors"
+              :class="store.getCategoryProgress(sc.id, sc.items.length) === 100
+                ? 'border-primary/50 bg-primary/5'
+                : 'border-default hover:border-accented'"
             >
-              <AnimatedIcon :icon="sc.icon" size="lg" class="mt-0.5 shrink-0" />
-              <div class="flex-1 min-w-0">
-                <div class="flex items-center justify-between gap-2 mb-1">
-                  <h3 class="font-bold text-zinc-900 text-sm sm:text-base group-hover:text-yellow-600 transition-colors truncate">
+              <AnimatedIcon
+                :icon="sc.icon"
+                size="lg"
+                class="mt-0.5 shrink-0"
+              />
+              <div class="min-w-0 flex-1">
+                <div class="mb-1 flex items-center justify-between gap-2">
+                  <h3 class="truncate text-sm font-bold text-highlighted group-hover:underline sm:text-base">
                     {{ sc.name }}
                   </h3>
                   <UBadge
                     v-if="store.getCategoryProgress(sc.id, sc.items.length) === 100"
-                    color="primary"
-                    variant="soft"
-                    size="xs"
-                    class="shrink-0 font-bold"
+                    color="neutral"
+                    variant="subtle"
+                    size="sm"
+                    icon="i-lucide-circle-check"
+                    label="Selesai"
+                    class="shrink-0"
+                  />
+                  <span
+                    v-else
+                    class="shrink-0 text-xs font-medium text-muted"
                   >
-                    ✓ Selesai
-                  </UBadge>
-                  <span v-else class="shrink-0 text-xs text-zinc-400 font-medium">
-                    {{ sc.items.length }} items
+                    {{ sc.items.length }} butir
                   </span>
                 </div>
-                <p class="text-xs text-zinc-600 leading-relaxed line-clamp-2">
+                <p class="line-clamp-2 text-xs leading-relaxed text-muted">
                   {{ sc.description }}
                 </p>
                 <div class="mt-3">
@@ -133,10 +131,12 @@ useHead({
             </NuxtLink>
           </div>
 
-          <div v-else class="text-center py-12 text-zinc-400">
-            <AnimatedIcon icon="📭" size="xl" class="mx-auto mb-2" />
-            <p>Belum ada sub-topik</p>
-          </div>
+          <UEmpty
+            v-else
+            icon="i-lucide-inbox"
+            title="Belum ada sub-topik"
+            description="Sub-topik untuk kategori ini sedang disusun."
+          />
         </section>
       </template>
     </UContainer>

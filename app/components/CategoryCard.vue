@@ -12,25 +12,12 @@ const props = withDefaults(defineProps<Props>(), {
 
 const store = useChecklistStore()
 
-// Self-contained fallback query: if props.subCategories is empty, fetch them by category slug
-const { data: fetchedSubCats } = await useAsyncData(`subcats-card-${props.category.slug}`, () =>
-  queryCollection('subcategories').where('parentSlug', '=', props.category.slug).order('stem', 'ASC').all(),
-)
-
-// Active list of subcategories to display
-const activeSubCategories = computed<SubCategory[]>(() => {
-  if (props.subCategories && props.subCategories.length > 0) {
-    return props.subCategories
-  }
-  return (fetchedSubCats.value as unknown as SubCategory[]) ?? []
-})
-
 const totalItems = computed(() =>
-  activeSubCategories.value.reduce((sum, sc) => sum + (sc.items?.length ?? 0), 0),
+  props.subCategories.reduce((sum, sc) => sum + (sc.items?.length ?? 0), 0),
 )
 
 const completedItems = computed(() =>
-  activeSubCategories.value.reduce((sum, sc) => sum + store.getCategoryCompleted(sc.id), 0),
+  props.subCategories.reduce((sum, sc) => sum + store.getCategoryCompleted(sc.id), 0),
 )
 
 const progress = computed(() =>
@@ -47,77 +34,82 @@ function getSubCatCompleted(sc: SubCategory) {
 </script>
 
 <template>
-  <UCard 
-    class="flex flex-col rounded-2xl border border-zinc-200 bg-white overflow-hidden shadow-xs hover:border-yellow-300 hover:shadow-sm transition-all duration-200 h-full"
+  <UCard
+    class="flex h-full flex-col overflow-hidden rounded-2xl shadow-xs transition-colors hover:ring-accented"
     :ui="{
       header: 'p-5 pb-4',
       body: 'px-5 py-2 flex-1',
-      footer: 'px-5 py-3 border-t border-zinc-100 bg-zinc-50/50 mt-auto',
+      footer: 'px-5 py-3 bg-elevated/50 mt-auto',
     }"
   >
     <template #header>
-      <div class="flex items-center justify-between">
-        <div class="flex items-center gap-3 min-w-0 flex-1">
-          <AnimatedIcon :icon="category.icon" size="xl" />
-          <UTooltip :text="category.name" class="min-w-0 font-normal">
-            <h2 class="font-extrabold text-zinc-900 text-base leading-snug truncate">
+      <div class="flex items-center justify-between gap-3">
+        <div class="flex min-w-0 flex-1 items-center gap-3">
+          <AnimatedIcon
+            :icon="category.icon"
+            size="xl"
+          />
+          <UTooltip
+            :text="category.name"
+            class="min-w-0"
+          >
+            <h2 class="truncate text-base leading-snug font-extrabold text-highlighted">
               {{ category.name }}
             </h2>
           </UTooltip>
         </div>
         <UButton
-          :to="`/kategori/${category.slug}`"
           :id="`view-all-${category.id}`"
+          :to="`/kategori/${category.slug}`"
           color="neutral"
           variant="subtle"
           size="xs"
-          class="rounded-xl font-semibold shrink-0 cursor-pointer"
-          :aria-label="`Lihat semua sub-topik ${category.name}`"
-        >
-          Lihat →
-        </UButton>
+          label="Buka"
+          trailing-icon="i-lucide-arrow-right"
+          class="shrink-0 rounded-xl font-semibold"
+          :aria-label="`Buka ${category.name}`"
+        />
       </div>
     </template>
 
-    <!-- Sub-category Chip Pills -->
     <div
-      v-if="activeSubCategories.length > 0"
-      class="grid grid-cols-2 gap-2 my-1"
+      v-if="subCategories.length > 0"
+      class="my-1 grid grid-cols-2 gap-2"
     >
       <UTooltip
-        v-for="sc in activeSubCategories"
+        v-for="sc in subCategories"
         :key="sc.id"
         :text="sc.name"
-        class="w-full min-w-0 font-normal"
+        class="w-full min-w-0"
       >
         <NuxtLink
-          :to="`/kategori/${category.slug}/${sc.slug}`"
           :id="`chip-${sc.id}`"
-          class="group flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs font-semibold transition-all duration-200 w-full min-w-0"
+          :to="`/kategori/${category.slug}/${sc.slug}`"
+          class="flex w-full min-w-0 items-center gap-2 rounded-xl border px-3 py-2.5 text-xs font-semibold text-highlighted transition-colors"
           :class="getSubCatProgress(sc) === 100
-            ? 'bg-yellow-50 border-yellow-300 text-yellow-900'
+            ? 'border-primary/50 bg-primary/10'
             : getSubCatCompleted(sc) > 0
-              ? 'bg-yellow-50/40 border-yellow-200 text-zinc-800'
-              : 'bg-zinc-50/80 border-zinc-200 text-zinc-800 hover:border-zinc-400'"
+              ? 'border-primary/30 bg-primary/5'
+              : 'border-default bg-elevated/50 hover:border-accented'"
         >
-          <AnimatedIcon :icon="sc.icon" size="sm" />
-          <span class="truncate leading-tight flex-1 min-w-0">{{ sc.name }}</span>
-          
-          <UBadge
+          <AnimatedIcon
+            :icon="sc.icon"
+            size="sm"
+          />
+          <span class="min-w-0 flex-1 truncate leading-tight">{{ sc.name }}</span>
+
+          <UIcon
             v-if="getSubCatProgress(sc) === 100"
-            color="primary"
-            variant="soft"
-            size="xs"
-            class="ml-auto shrink-0 font-bold"
-          >
-            ✓
-          </UBadge>
+            name="i-lucide-circle-check"
+            class="ml-auto size-4 shrink-0 text-primary"
+            aria-label="Selesai"
+          />
           <UBadge
             v-else-if="getSubCatCompleted(sc) > 0"
-            color="primary"
+            color="neutral"
             variant="subtle"
-            size="xs"
-            class="ml-auto shrink-0 text-[10px] font-bold"
+            size="sm"
+            class="ml-auto shrink-0 font-bold"
           >
             {{ getSubCatCompleted(sc) }}/{{ sc.items?.length }}
           </UBadge>
@@ -125,13 +117,13 @@ function getSubCatCompleted(sc: SubCategory) {
       </UTooltip>
     </div>
 
-    <!-- Loading / Empty skeleton placeholder -->
-    <div v-else class="grid grid-cols-2 gap-2 my-1">
-      <USkeleton class="h-9 rounded-xl" />
-      <USkeleton class="h-9 rounded-xl" />
-    </div>
+    <p
+      v-else
+      class="my-1 text-sm text-muted"
+    >
+      Belum ada sub-topik.
+    </p>
 
-    <!-- Progress bar footer -->
     <template #footer>
       <ProgressBar
         :value="progress"
