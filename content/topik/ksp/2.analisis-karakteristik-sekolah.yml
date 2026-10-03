@@ -1,0 +1,33 @@
+kunci: analisis-karakteristik-sekolah
+slug: analisis-karakteristik-sekolah
+tahap: ksp
+judul: Analisis karakteristik sekolah
+ringkasan: Sebelum mengembangkan kurikulum, sekolah menganalisis karakteristik dan lingkungan belajarnya. Hasilnya menjadi landasan merumuskan visi, misi, dan tujuan.
+ikon: 003-magnifier.svg
+terkait: [prinsip-penyusunan-ksp, visi-misi-dan-tujuan]
+butir:
+  - kunci: libatkan-perwakilan-warga
+    judul: Libatkan perwakilan warga sekolah
+    penjelasan: Misalnya pendidik, tenaga kependidikan, murid, dan orang tua.
+    dasar:
+      - Panduan Pengembangan Kurikulum Satuan Pendidikan edisi revisi 2025, Komponen 1, prinsip analisis lingkungan belajar
+
+  - kunci: data-kondisi-nyata
+    judul: Pakai data dari kondisi nyata sekolah
+    penjelasan: Sediakan waktu yang cukup untuk mengumpulkan, mengorganisasi, menganalisis, dan mendokumentasikan data.
+    dasar:
+      - Panduan Pengembangan Kurikulum Satuan Pendidikan edisi revisi 2025, Komponen 1, prinsip analisis lingkungan belajar
+
+  - kunci: cara-mengumpulkan
+    judul: Kumpulkan informasi dengan beberapa cara
+    penjelasan: Misalnya kuesioner, wawancara, diskusi kelompok terpumpun, observasi, dan analisis Rapor Pendidikan.
+    catatan: Untuk observasi, Panduan menyarankan lebih dari satu orang mengamati di waktu yang sama supaya hasilnya bisa diandalkan.
+    dasar:
+      - Panduan Pengembangan Kurikulum Satuan Pendidikan edisi revisi 2025, Komponen 1, cara mengumpulkan informasi
+
+  - kunci: pertanyaan-analisis
+    judul: Jawab pertanyaan kunci tentang sekolah dan lingkungannya
+    penjelasan: Pilah informasi yang relevan, lalu simpulkan untuk menyusun strategi.
+    contoh: "Contoh pertanyaan di Panduan: nilai apa yang perlu dihidupkan di sekolah? Bagaimana keterlibatan orang tua? Apa potensi dan kekhasan daerah setempat? Bagaimana peran sekolah dalam menyiapkan murid mencapai delapan dimensi profil lulusan?"
+    dasar:
+      - Panduan Pengembangan Kurikulum Satuan Pendidikan edisi revisi 2025, Komponen 1, contoh informasi yang perlu didapatkan

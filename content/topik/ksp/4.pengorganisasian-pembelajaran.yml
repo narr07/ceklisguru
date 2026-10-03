@@ -1,0 +1,37 @@
+kunci: pengorganisasian-pembelajaran
+slug: pengorganisasian-pembelajaran
+tahap: ksp
+judul: Pengorganisasian pembelajaran
+ringkasan: Pengorganisasian pembelajaran mengatur cara sekolah menata kompetensi, muatan pembelajaran, dan beban belajar dalam satu rentang waktu.
+ikon: 031-calendar.svg
+terkait: [visi-misi-dan-tujuan, perencanaan-evaluasi-dan-revisi]
+butir:
+  - kunci: analisis-kebutuhan
+    judul: Mulai dari analisis kebutuhan sekolah
+    penjelasan: Prioritaskan kebutuhan murid, sesuaikan dengan pendidik dan tenaga kependidikan yang ada, serta pertimbangkan sarana dan prasarana sekolah.
+    dasar:
+      - Panduan Pengembangan Kurikulum Satuan Pendidikan edisi revisi 2025, Komponen 3, Menganalisis Kebutuhan untuk Mengorganisasi Pembelajaran
+
+  - kunci: rapor-pendidikan
+    judul: Pakai hasil Rapor Pendidikan untuk menentukan prioritas
+    penjelasan: Perencanaan berbasis data membantu sekolah menemukan hal yang perlu dibenahi selama satu tahun ajaran.
+    dasar:
+      - Panduan Pengembangan Kurikulum Satuan Pendidikan edisi revisi 2025, Komponen 3, Menganalisis Kebutuhan untuk Mengorganisasi Pembelajaran
+
+  - kunci: tiga-kegiatan
+    judul: Susun struktur kurikulum yang memuat intrakurikuler, kokurikuler, dan ekstrakurikuler
+    penjelasan: Intrakurikuler berupa mata pelajaran wajib, pilihan, dan muatan lokal. Kokurikuler berupa tema yang dikembangkan sekolah. Ekstrakurikuler mengembangkan minat dan bakat murid.
+    dasar:
+      - Panduan Pengembangan Kurikulum Satuan Pendidikan edisi revisi 2025, Komponen 3, Pengorganisasian Pembelajaran di Satuan Pendidikan
+
+  - kunci: kepramukaan
+    judul: Sediakan paling sedikit ekstrakurikuler kepramukaan
+    penjelasan: Atau kepanduan lain yang setara.
+    dasar:
+      - Panduan Pengembangan Kurikulum Satuan Pendidikan edisi revisi 2025, Komponen 3, tabel Ekstrakurikuler
+
+  - kunci: bentuk-pengorganisasian
+    judul: Pilih cara mengorganisasi pembelajaran yang sesuai
+    penjelasan: Pembelajaran bisa diorganisasi berbasis mata pelajaran, tematik, terintegrasi, atau dalam blok waktu terpisah.
+    dasar:
+      - Panduan Pengembangan Kurikulum Satuan Pendidikan edisi revisi 2025, Komponen 3, Pengorganisasian Pembelajaran Mata Pelajaran, Tematik, Integrasi, dan Blok
