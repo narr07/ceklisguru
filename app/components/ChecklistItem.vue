@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { animate } from 'animejs'
 import type { Topik } from '~/composables/useCeklis'
 
 const props = defineProps<{
@@ -7,15 +8,22 @@ const props = defineProps<{
 }>()
 
 const store = useChecklistStore()
+const card = useTemplateRef<HTMLLIElement>('card')
 const contohOpen = ref(false)
 const canHover = ref(true)
 onMounted(() => {
   canHover.value = window.matchMedia('(hover: hover)').matches
 })
 
+// The bounce lives in the setter, not a watcher, so ticks restored from storage on load stay still
 const checked = computed({
   get: () => store.isChecked(props.topik, props.butir.kunci),
-  set: value => store.setChecked(props.topik, props.butir.kunci, value === true),
+  set: (value) => {
+    store.setChecked(props.topik, props.butir.kunci, value === true)
+    if (value === true && card.value && motionAllowed()) {
+      animate(card.value, { scale: [1, 1.015, 1], duration: 320, ease: 'out(3)' })
+    }
+  },
 })
 
 // Clicking anywhere on the card ticks it. The checkbox, its label, and the example
@@ -30,6 +38,7 @@ function onCardClick(event: MouseEvent) {
 
 <template>
   <li
+    ref="card"
     class="cursor-pointer rounded-2xl border p-4 transition-colors sm:p-5"
     :class="checked ? 'border-primary/40 bg-primary/5' : 'border-default bg-default hover:border-accented'"
     @click="onCardClick"

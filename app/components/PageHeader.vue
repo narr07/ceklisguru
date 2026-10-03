@@ -59,7 +59,17 @@ function reset() {
       class="mt-6 flex flex-wrap items-center gap-x-4 gap-y-3"
     >
       <p class="text-sm text-muted">
-        <span class="font-bold text-highlighted">{{ store.loaded ? done : '–' }}</span> dari {{ total }} butir selesai
+        <AnimeTransition
+          enter-animation="mt-count"
+          leave-animation="mt-count"
+          mode="out-in"
+        >
+          <span
+            :key="store.loaded ? done : 'memuat'"
+            class="inline-block font-bold text-highlighted tabular-nums"
+          >{{ store.loaded ? done : '–' }}</span>
+        </AnimeTransition>
+        dari {{ total }} butir selesai
       </p>
       <UProgress
         :model-value="store.loaded ? percent : null"
@@ -67,6 +77,17 @@ function reset() {
         size="sm"
         :aria-label="`${percent}% selesai`"
       />
+      <AnimeTransition
+        enter-animation="mt-pop"
+        leave-animation="mt-pop"
+      >
+        <UBadge
+          v-if="store.loaded && done === total"
+          color="neutral"
+          icon="i-lucide-party-popper"
+          label="Selesai"
+        />
+      </AnimeTransition>
 
       <UModal
         v-if="done > 0"

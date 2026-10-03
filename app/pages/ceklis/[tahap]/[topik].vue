@@ -19,6 +19,10 @@ const terkait = computed(() => (topik.value?.terkait ?? [])
   .map(kunci => topikList.value?.find(t => t.kunci === kunci))
   .filter(t => t !== undefined))
 
+// Brief "Tersalin" state on the button, so the result shows where the click happened
+const copied = ref(false)
+let copiedTimer: ReturnType<typeof setTimeout> | undefined
+
 async function salinCeklis() {
   if (!topik.value) return
   const t = topik.value
@@ -30,6 +34,9 @@ async function salinCeklis() {
   ]
   try {
     await navigator.clipboard.writeText(lines.join('\n'))
+    copied.value = true
+    clearTimeout(copiedTimer)
+    copiedTimer = setTimeout(() => (copied.value = false), 2000)
     toast.add({ title: 'Ceklis disalin', description: 'Tempel di WhatsApp, catatan, atau dokumen.', icon: 'i-lucide-clipboard-check' })
   }
   catch {
@@ -44,86 +51,95 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="min-h-screen bg-default">
-    <AppHeader />
+  <UContainer
+    v-if="tahap && topik"
+    class="max-w-5xl py-8 sm:py-10"
+  >
+    <PageHeader
+      :title="topik.judul"
+      :description="topik.ringkasan"
+      :icon="topik.ikon"
+      :eyebrow="nomor > 0 ? `Tahap ${nomor}: ${tahap.nama}` : tahap.nama"
+      :breadcrumb="[
+        { label: 'Beranda', icon: 'i-lucide-house', to: '/' },
+        { label: tahap.nama, to: `/ceklis/${tahap.slug}` },
+        { label: topik.judul },
+      ]"
+      :done="done"
+      :total="topik.butir.length"
+      :reset-keys="[topik.kunci]"
+    />
 
-    <UContainer
-      v-if="tahap && topik"
-      class="max-w-5xl py-8 sm:py-10"
-    >
-      <PageHeader
-        :title="topik.judul"
-        :description="topik.ringkasan"
-        :icon="topik.ikon"
-        :eyebrow="nomor > 0 ? `Tahap ${nomor}: ${tahap.nama}` : tahap.nama"
-        :breadcrumb="[
-          { label: 'Beranda', icon: 'i-lucide-house', to: '/' },
-          { label: tahap.nama, to: `/ceklis/${tahap.slug}` },
-          { label: topik.judul },
-        ]"
-        :done="done"
-        :total="topik.butir.length"
-        :reset-keys="[topik.kunci]"
-      />
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+      <section
+        class="lg:col-span-2"
+        :aria-label="`Ceklis ${topik.judul}`"
+      >
+        <ul class="space-y-3">
+          <ChecklistItem
+            v-for="b in topik.butir"
+            :key="b.kunci"
+            :topik="topik.kunci"
+            :butir="b"
+          />
+        </ul>
+      </section>
 
-      <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
-        <section
-          class="lg:col-span-2"
-          :aria-label="`Ceklis ${topik.judul}`"
+      <aside class="space-y-6">
+        <UButton
+          block
+          color="neutral"
+          :label="copied ? 'Tersalin' : 'Salin ceklis'"
+          @click="salinCeklis"
         >
-          <ul class="space-y-3">
-            <ChecklistItem
-              v-for="b in topik.butir"
-              :key="b.kunci"
-              :topik="topik.kunci"
-              :butir="b"
-            />
-          </ul>
-        </section>
+          <template #leading>
+            <AnimeTransition
+              enter-animation="mt-pop"
+              leave-animation="mt-pop"
+              mode="out-in"
+            >
+              <UIcon
+                :key="copied ? 'tersalin' : 'salin'"
+                :name="copied ? 'i-lucide-check' : 'i-lucide-copy'"
+                class="size-5"
+              />
+            </AnimeTransition>
+          </template>
+        </UButton>
 
-        <aside class="space-y-6">
-          <UButton
-            block
-            color="neutral"
-            icon="i-lucide-copy"
-            label="Salin ceklis"
-            @click="salinCeklis"
-          />
-
-          <div v-if="terkait.length">
-            <h2 class="mb-2 text-sm font-semibold text-muted">
-              Topik terkait
-            </h2>
-            <ul class="space-y-1">
-              <li
-                v-for="t in terkait"
-                :key="t.kunci"
+        <div v-if="terkait.length">
+          <h2 class="mb-2 text-sm font-semibold text-muted">
+            Topik terkait
+          </h2>
+          <ul class="space-y-1">
+            <li
+              v-for="t in terkait"
+              :key="t.kunci"
+            >
+              <ULink
+                :to="topikUrl(t, tahapList ?? [])"
+                class="flex items-center gap-2 rounded-lg p-2 text-sm font-medium text-highlighted hover:bg-elevated"
               >
-                <ULink
-                  :to="topikUrl(t, tahapList ?? [])"
-                  class="flex items-center gap-2 rounded-lg p-2 text-sm font-medium text-highlighted hover:bg-elevated"
-                >
-                  <UIcon
-                    :name="t.ikon"
-                    mode="svg"
-                    class="app-icon shrink-0 size-5"
-                  />
-                  {{ t.judul }}
-                </ULink>
-              </li>
-            </ul>
-          </div>
+                <UIcon
+                  :name="t.ikon"
+                  mode="svg"
+                  class="app-icon shrink-0 size-5"
+                />
+                {{ t.judul }}
+              </ULink>
+            </li>
+          </ul>
+        </div>
 
-          <UButton
-            :to="`/ceklis/${tahap.slug}`"
-            color="neutral"
-            variant="ghost"
-            icon="i-lucide-arrow-left"
-            :label="`Semua topik di ${tahap.nama}`"
-            class="whitespace-normal"
-          />
-        </aside>
-      </div>
-    </UContainer>
-  </div>
+        <UButton
+          :to="`/ceklis/${tahap.slug}`"
+          color="neutral"
+          variant="ghost"
+          icon="i-lucide-arrow-left"
+          :label="`Semua topik di ${tahap.nama}`"
+          class="whitespace-normal"
+        />
+      </aside>
+    </div>
+  </UContainer>
 </template>

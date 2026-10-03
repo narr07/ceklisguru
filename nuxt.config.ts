@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',
+    'nanime',
     '@nuxt/ui',
     '@pinia/nuxt',
     'nuxt-studio',
@@ -13,6 +14,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   app: {
+    // Leave is instant and enter fades in (main.css), so the scroll never jumps mid-transition
+    pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       title: 'CeklisGuru',
       htmlAttrs: { lang: 'id' },
@@ -71,6 +74,12 @@ export default defineNuxtConfig({
     customCollections: [
       { prefix: 'ceklis', dir: './app/assets/icons' },
     ],
+    // Bundle the collection in dev too: otherwise each icon is fetched from the dev server and
+    // shows blank when that request passes the 1.5 s timeout. scan adds the Lucide icons the code uses
+    clientBundle: {
+      includeCustomCollections: true,
+      scan: true,
+    },
   },
 
   ogImage: {

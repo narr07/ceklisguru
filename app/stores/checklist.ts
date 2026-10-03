@@ -9,8 +9,6 @@ type Progress = Record<string, Record<string, true>>
 export const useChecklistStore = defineStore('checklist', () => {
   const progress = ref<Progress>({})
   const loaded = ref(false)
-  // Teachers with v1 progress get a one-time notice that the checklist was rebuilt
-  const hasLegacyProgress = ref(false)
 
   function isChecked(topik: string, butir: string) {
     return progress.value[topik]?.[butir] === true
@@ -40,7 +38,8 @@ export const useChecklistStore = defineStore('checklist', () => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY)
       if (saved) progress.value = JSON.parse(saved)
-      hasLegacyProgress.value = localStorage.getItem(LEGACY_KEY) !== null
+      // v1 ticks cannot map onto the rebuilt checklist, so they are dropped quietly
+      localStorage.removeItem(LEGACY_KEY)
     }
     catch {
       // Unreadable storage means starting empty, which the page already shows
@@ -57,25 +56,13 @@ export const useChecklistStore = defineStore('checklist', () => {
     }
   }
 
-  function dismissLegacyNotice() {
-    hasLegacyProgress.value = false
-    try {
-      localStorage.removeItem(LEGACY_KEY)
-    }
-    catch {
-      // Notice comes back next visit; harmless
-    }
-  }
-
   return {
     progress,
     loaded,
-    hasLegacyProgress,
     isChecked,
     countDone,
     setChecked,
     reset,
     load,
-    dismissLegacyNotice,
   }
 })

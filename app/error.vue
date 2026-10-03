@@ -21,12 +21,14 @@ useHead({ title: computed(() => `${shown.value.statusMessage} · CeklisGuru`) })
 
 <template>
   <UApp :locale="id">
-    <div class="min-h-screen bg-default">
+    <div class="flex min-h-screen flex-col bg-default">
       <AppHeader />
       <UError
         :error="shown"
         :clear="{ label: 'Kembali ke Beranda', icon: 'i-lucide-arrow-left' }"
+        class="flex-1"
       />
+      <AppFooter />
     </div>
   </UApp>
 </template>

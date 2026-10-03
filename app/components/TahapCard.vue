@@ -68,7 +68,16 @@ const next = computed(() => {
             :aria-label="`${tahap.nama}: ${percent}% selesai`"
           />
           <span class="text-xs font-semibold text-muted tabular-nums">
-            {{ store.loaded ? done : '–' }}/{{ total }}
+            <AnimeTransition
+              enter-animation="mt-count"
+              leave-animation="mt-count"
+              mode="out-in"
+            >
+              <span
+                :key="store.loaded ? done : 'memuat'"
+                class="inline-block"
+              >{{ store.loaded ? done : '–' }}</span>
+            </AnimeTransition>/{{ total }}
           </span>
         </div>
         <p

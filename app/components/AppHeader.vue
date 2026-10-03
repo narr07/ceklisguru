@@ -14,6 +14,14 @@
     </template>
 
     <template #right>
+      <UButton
+        to="/panduan"
+        color="neutral"
+        variant="ghost"
+        icon="i-lucide-book-open"
+        label="Panduan"
+        class="hidden sm:inline-flex"
+      />
       <SettingsMenu />
     </template>
   </UHeader>

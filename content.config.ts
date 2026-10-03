@@ -19,6 +19,11 @@ const butir = z.object({
 
 export default defineContentConfig({
   collections: {
+    // Prose pages such as /panduan, rendered with Nuxt UI prose components
+    halaman: defineCollection({
+      type: 'page',
+      source: { include: 'halaman/*.md', prefix: '/' },
+    }),
     tahap: defineCollection({
       type: 'data',
       source: 'tahap/*.yml',
