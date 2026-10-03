@@ -1,88 +1,81 @@
 import { defineStore } from 'pinia'
-import type { Progress } from '~/types/checklist'
 
-const STORAGE_KEY = 'ceklisGuru_progress'
+// v1 keyed progress by Nuxt Content file paths, which break on any rename; v2 uses `kunci` from content
+const STORAGE_KEY = 'ceklisGuru_progress_v2'
+const LEGACY_KEY = 'ceklisGuru_progress'
+
+type Progress = Record<string, Record<string, true>>
 
 export const useChecklistStore = defineStore('checklist', () => {
-  // State
   const progress = ref<Progress>({})
+  const loaded = ref(false)
+  // Teachers with v1 progress get a one-time notice that the checklist was rebuilt
+  const hasLegacyProgress = ref(false)
 
-  // Getters
-  const getProgress = computed(() => (categoryId: string, itemId: string): boolean => {
-    return progress.value[categoryId]?.[itemId] ?? false
-  })
-
-  const getCategoryProgress = computed(() => (categoryId: string, totalItems: number): number => {
-    if (!progress.value[categoryId]) return 0
-    const completed = Object.values(progress.value[categoryId]).filter(Boolean).length
-    return totalItems > 0 ? Math.round((completed / totalItems) * 100) : 0
-  })
-
-  const getCategoryCompleted = computed(() => (categoryId: string): number => {
-    if (!progress.value[categoryId]) return 0
-    return Object.values(progress.value[categoryId]).filter(Boolean).length
-  })
-
-  // Actions
-  function toggleItem(categoryId: string, itemId: string) {
-    if (!progress.value[categoryId]) {
-      progress.value[categoryId] = {}
-    }
-    progress.value[categoryId][itemId] = !progress.value[categoryId][itemId]
-    saveToLocalStorage()
+  function isChecked(topik: string, butir: string) {
+    return progress.value[topik]?.[butir] === true
   }
 
-  function loadFromLocalStorage() {
-    if (import.meta.client) {
-      try {
-        const saved = localStorage.getItem(STORAGE_KEY)
-        if (saved) {
-          progress.value = JSON.parse(saved)
-        }
-      }
-      catch (e) {
-        console.warn('Failed to load progress from localStorage', e)
-      }
-    }
+  // Counts only items that still exist, so removed items never inflate progress
+  function countDone(topik: string, butirKeys: string[]) {
+    const done = progress.value[topik]
+    return done ? butirKeys.filter(key => done[key]).length : 0
   }
 
-  function saveToLocalStorage() {
-    if (import.meta.client) {
-      try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(progress.value))
-      }
-      catch (e) {
-        console.warn('Failed to save progress to localStorage', e)
-      }
-    }
+  function setChecked(topik: string, butir: string, checked: boolean) {
+    const others = Object.entries(progress.value[topik] ?? {}).filter(([key]) => key !== butir)
+    const items: Record<string, true> = Object.fromEntries(checked ? [...others, [butir, true as const]] : others)
+    progress.value = { ...progress.value, [topik]: items }
+    save()
   }
 
-  function resetCategoryProgress(categoryId: string) {
-    resetMultipleCategoriesProgress([categoryId])
-  }
-
-  function resetMultipleCategoriesProgress(categoryIds: string[]) {
+  function reset(topikKeys: string[]) {
     progress.value = Object.fromEntries(
-      Object.entries(progress.value).filter(([id]) => !categoryIds.includes(id)),
+      Object.entries(progress.value).filter(([key]) => !topikKeys.includes(key)),
     )
-    saveToLocalStorage()
+    save()
   }
 
-  function resetProgress() {
-    progress.value = {}
-    saveToLocalStorage()
+  function load() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY)
+      if (saved) progress.value = JSON.parse(saved)
+      hasLegacyProgress.value = localStorage.getItem(LEGACY_KEY) !== null
+    }
+    catch {
+      // Unreadable storage means starting empty, which the page already shows
+    }
+    loaded.value = true
+  }
+
+  function save() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(progress.value))
+    }
+    catch {
+      // Storage full or blocked: the check stays for this visit only
+    }
+  }
+
+  function dismissLegacyNotice() {
+    hasLegacyProgress.value = false
+    try {
+      localStorage.removeItem(LEGACY_KEY)
+    }
+    catch {
+      // Notice comes back next visit; harmless
+    }
   }
 
   return {
     progress,
-    getProgress,
-    getCategoryProgress,
-    getCategoryCompleted,
-    toggleItem,
-    loadFromLocalStorage,
-    saveToLocalStorage,
-    resetCategoryProgress,
-    resetMultipleCategoriesProgress,
-    resetProgress,
+    loaded,
+    hasLegacyProgress,
+    isChecked,
+    countDone,
+    setChecked,
+    reset,
+    load,
+    dismissLegacyNotice,
   }
 })

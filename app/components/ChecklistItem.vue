@@ -1,48 +1,84 @@
 <script setup lang="ts">
-import type { ChecklistItem } from '~/types/checklist'
+import type { Topik } from '~/composables/useCeklis'
 
-interface Props {
-  item: ChecklistItem
-  categoryId: string
-}
-
-const props = defineProps<Props>()
+const props = defineProps<{
+  topik: string
+  butir: Topik['butir'][number]
+}>()
 
 const store = useChecklistStore()
+const contohOpen = ref(false)
+const canHover = ref(true)
+onMounted(() => {
+  canHover.value = window.matchMedia('(hover: hover)').matches
+})
 
-const isChecked = computed({
-  get: () => store.getProgress(props.categoryId, props.item.id),
-  set: () => store.toggleItem(props.categoryId, props.item.id),
+const checked = computed({
+  get: () => store.isChecked(props.topik, props.butir.kunci),
+  set: value => store.setChecked(props.topik, props.butir.kunci, value === true),
 })
 </script>
 
 <template>
-  <li>
+  <li
+    class="rounded-2xl border p-4 transition-colors sm:p-5"
+    :class="checked ? 'border-primary/40 bg-primary/5' : 'border-default bg-default'"
+  >
     <UCheckbox
-      :id="`checklist-item-${item.id}`"
-      v-model="isChecked"
-      variant="card"
+      :id="`butir-${butir.kunci}`"
+      v-model="checked"
       size="lg"
-      :label="item.title"
+      :label="butir.judul"
+      :description="butir.penjelasan"
       :ui="{
-        root: 'rounded-2xl transition-colors',
-        label: isChecked ? 'text-muted line-through' : 'text-highlighted font-bold',
-        description: isChecked ? 'opacity-60' : '',
+        label: checked ? 'text-muted line-through' : 'text-highlighted font-bold',
+        description: 'mt-1 leading-relaxed',
       }"
+    />
+
+    <div
+      v-if="butir.catatan || butir.contoh"
+      class="mt-3 space-y-3 ps-8"
     >
-      <template #description>
-        <span class="mt-1 block leading-relaxed">{{ item.description }}</span>
-        <span
-          v-if="item.tip"
-          class="mt-2.5 flex items-start gap-2.5 rounded-xl bg-elevated p-3 text-xs leading-relaxed text-toned"
-        >
-          <UIcon
-            name="i-lucide-lightbulb"
-            class="mt-0.5 size-4 shrink-0 text-primary"
-          />
-          <span>{{ item.tip }}</span>
-        </span>
-      </template>
-    </UCheckbox>
+      <p
+        v-if="butir.catatan"
+        class="flex items-start gap-2 rounded-xl bg-elevated p-3 text-sm leading-relaxed text-toned"
+      >
+        <UIcon
+          name="i-lucide-bookmark"
+          class="mt-0.5 size-4 shrink-0 text-primary"
+        />
+        <span>{{ butir.catatan }}</span>
+      </p>
+
+      <!-- Hover where a pointer can hover, tap elsewhere; keyed because UPopover picks its mode once, at setup -->
+      <UPopover
+        v-if="butir.contoh"
+        :key="canHover ? 'hover' : 'click'"
+        v-model:open="contohOpen"
+        :mode="canHover ? 'hover' : 'click'"
+        :open-delay="150"
+        :close-delay="150"
+        :content="{ side: 'top', align: 'start', collisionPadding: 16 }"
+      >
+        <UButton
+          color="neutral"
+          variant="soft"
+          size="sm"
+          icon="i-lucide-eye"
+          label="Lihat contoh"
+          :aria-expanded="contohOpen"
+        />
+
+        <template #content>
+          <div class="max-w-sm p-4 text-sm leading-relaxed text-toned">
+            <p class="mb-1 font-semibold text-highlighted">
+              Contoh di kelas
+            </p>
+            <p>{{ butir.contoh }}</p>
+          </div>
+        </template>
+      </UPopover>
+    </div>
   </li>
 </template>

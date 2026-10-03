@@ -4,12 +4,12 @@ import { id } from '@nuxt/ui/locale'
 const store = useChecklistStore()
 
 onMounted(() => {
-  store.loadFromLocalStorage()
+  store.load()
 })
 
 defineOgImage('BrutalistTakumi', {
-  title: 'CeklisGuru - Platform Checklist Guru Indonesia',
-  description: 'Platform checklist interaktif untuk guru Indonesia meningkatkan kualitas pembelajaran dengan praktik terbaik yang terstruktur.',
+  title: 'CeklisGuru',
+  description: 'Ceklis mengajar dari dasar sampai lanjut, disusun dari Standar Proses dan standar kompetensi guru terbaru.',
   subtitle: 'CeklisGuru',
   accent: '#facc15',
 })

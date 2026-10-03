@@ -14,10 +14,10 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'CeklisGuru - Praktik Terbaik Pembelajaran untuk Guru Indonesia',
+      title: 'CeklisGuru',
       htmlAttrs: { lang: 'id' },
       meta: [
-        { name: 'description', content: 'Platform checklist interaktif untuk guru Indonesia meningkatkan kualitas pembelajaran dengan praktik terbaik yang terstruktur.' },
+        { name: 'description', content: 'Ceklis mengajar dari dasar sampai lanjut, disusun dari Standar Proses dan standar kompetensi guru terbaru.' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       ],
       link: [
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/': { prerender: true },
-    '/kategori/**': { prerender: true },
+    '/ceklis/**': { prerender: true },
   },
   compatibilityDate: '2024-04-03',
 
