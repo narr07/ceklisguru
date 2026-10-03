@@ -2,46 +2,36 @@ kunci: isi-dokumen-perencanaan
 slug: isi-dokumen-perencanaan
 tahap: merencanakan
 judul: Isi dokumen perencanaan
-ringkasan: Dokumen perencanaan pembelajaran paling sedikit memuat tiga hal, yaitu tujuan, langkah, dan asesmen pembelajaran.
+ringkasan: Dokumen perencanaan boleh berupa RPP atau modul ajar. Apa pun bentuknya, isinya paling sedikit tujuan, langkah, dan asesmen pembelajaran.
 ikon: 018-notes.svg
+terkait: [tujuan-pembelajaran, merencanakan-asesmen, langkah-pembelajaran]
 butir:
-  - kunci: tujuan-kompetensi-konten
-    judul: Rumuskan tujuan yang memuat kompetensi dan konten
-    penjelasan: Tujuan menyebut kemampuan yang harus dicapai murid sekaligus ruang lingkup materinya, dengan kata kerja operasional yang relevan.
-    contoh: "Salah satu tujuan di contoh Paparan Pembelajaran Mendalam: murid mampu mengidentifikasi dampak aktivitas manusia terhadap keseimbangan ekosistem. Kompetensinya mengidentifikasi, kontennya dampak aktivitas manusia terhadap keseimbangan ekosistem."
+  - kunci: memuat-tujuan
+    judul: Pastikan dokumenmu memuat tujuan pembelajaran
+    penjelasan: Tujuan pembelajaran adalah kompetensi dan konten pada ruang lingkup materi yang harus dicapai murid.
     dasar:
       - Permendikdasmen 1/2026 Pasal 5 huruf a dan Pasal 6 ayat 1
-      - Paparan Pembelajaran Mendalam, Desain Pembelajaran bagian Tujuan Pembelajaran
 
-  - kunci: tujuan-acuan-standar
-    judul: Turunkan tujuan dari standar kompetensi lulusan dan standar isi
-    penjelasan: Sesuaikan juga dengan karakteristik murid dan sumber daya yang ada di sekolahmu.
-    contoh: "Dari contoh di Paparan: murid punya pengetahuan dasar yang beragam tentang isu lingkungan dan minatnya tinggi pada kegiatan berbasis proyek, jadi tujuannya diarahkan ke proyek nyata di sekitar Sungai Ciliwung."
+  - kunci: memuat-langkah
+    judul: Pastikan dokumenmu memuat langkah pembelajaran
+    penjelasan: Langkah pembelajaran adalah tahapan yang memberi murid pengalaman belajar untuk mencapai tujuan.
     dasar:
-      - Permendikdasmen 1/2026 Pasal 6 ayat 2
-      - Paparan Pembelajaran Mendalam, Identifikasi Peserta Didik
+      - Permendikdasmen 1/2026 Pasal 5 huruf b dan Pasal 7 ayat 1
 
-  - kunci: langkah-pengalaman-belajar
-    judul: Rancang langkah yang memberi pengalaman memahami, mengaplikasi, dan merefleksi
-    penjelasan: Langkah dibagi ke kegiatan awal, inti, dan penutup. Ketiga pengalaman belajar itu ada di kegiatan inti dan tidak harus selesai dalam satu pertemuan.
-    contoh: "Dari contoh di Paparan. Memahami: murid membaca artikel dan membuat peta konsep tentang ekosistem. Mengaplikasi: murid mengunjungi sungai, mewawancarai warga, lalu merancang proyek pengelolaan sampah di sekolah. Merefleksi: murid menulis jurnal refleksi dan menilai sendiri ketercapaian tujuannya."
-    dasar:
-      - Permendikdasmen 1/2026 Pasal 5 huruf b, Pasal 7 ayat 1, dan Pasal 10
-      - Paparan Pembelajaran Mendalam, Langkah-Langkah Pembelajaran
-
-  - kunci: langkah-prinsip
-    judul: Terapkan prinsip berkesadaran, bermakna, dan menggembirakan di setiap langkah
-    penjelasan: Berkesadaran berarti murid memahami tujuan belajarnya. Bermakna berarti murid menerapkan yang dipelajari dalam kehidupan nyata. Menggembirakan berarti suasananya positif, menantang, menyenangkan, dan memotivasi.
-    contoh: "Dari contoh di Paparan, kegiatan awal yang berkesadaran dan bermakna: guru memutar video singkat sungai yang bersih dan yang tercemar, bertanya \"Bagaimana kondisi makhluk hidup pada kedua sungai tersebut?\", lalu menyampaikan tujuan pembelajaran."
-    dasar:
-      - Permendikdasmen 1/2026 Pasal 3 dan Pasal 7 ayat 2
-      - Paparan Pembelajaran Mendalam, Langkah-Langkah Pembelajaran
-
-  - kunci: asesmen-sesuai-tujuan
-    judul: Pilih teknik dan instrumen asesmen yang sesuai dengan tujuan
-    penjelasan: Rencanakan asesmen di awal, selama, dan di akhir pembelajaran, dengan teknik yang beragam.
-    catatan: Contoh teknik di Paparan Pembelajaran Mendalam antara lain penilaian diri, penilaian sejawat, observasi, portofolio, penilaian proyek, penilaian produk, tes tertulis, dan tes lisan.
-    contoh: "Diadaptasi dari contoh di Paparan. Di awal: tanya jawab tentang bacaan untuk melihat pengetahuan awal murid. Selama: umpan balik dari teman, guru, dan narasumber saat presentasi proyek. Di akhir: murid menilai sendiri ketercapaian tujuan, dan guru menilai proyeknya."
+  - kunci: memuat-asesmen
+    judul: Pastikan dokumenmu memuat asesmen pembelajaran
+    penjelasan: Asesmen memakai teknik dan instrumen yang beragam dan sesuai dengan tujuan pembelajaran.
     dasar:
       - Permendikdasmen 1/2026 Pasal 5 huruf c dan Pasal 8 ayat 1
-      - Paparan Pembelajaran Mendalam, Asesmen Pembelajaran
+
+  - kunci: bentuk-sederhana
+    judul: Susun dokumen yang fleksibel, jelas, dan sederhana
+    penjelasan: Bentuknya boleh RPP atau modul ajar. Dokumen ini dibuat untuk memandu kamu mengajar sehari-hari.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Bab Perencanaan, C.1 Perencanaan Pembelajaran
+
+  - kunci: berdasarkan-alur
+    judul: Susun perencanaan berdasarkan alur tujuan pembelajaran
+    penjelasan: Alur tiap guru bisa berbeda, jadi perencanaanmu boleh berbeda dari guru lain di fase yang sama. Sesuaikan dengan murid, lingkungan sekolah, dan sarana yang tersedia.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Bab Perencanaan, C.1 Perencanaan Pembelajaran

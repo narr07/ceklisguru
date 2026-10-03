@@ -1,0 +1,45 @@
+kunci: langkah-pembelajaran
+slug: langkah-pembelajaran
+tahap: merencanakan
+judul: Langkah pembelajaran
+ringkasan: Langkah pembelajaran dibagi menjadi kegiatan awal, inti, dan penutup, dengan prinsip berkesadaran, bermakna, dan menggembirakan.
+ikon: 030-calendar.svg
+terkait: [kerangka-pembelajaran, merencanakan-asesmen]
+butir:
+  - kunci: kegiatan-awal
+    judul: Siapkan murid lewat kegiatan awal
+    penjelasan: Isinya orientasi yang bermakna, apersepsi yang kontekstual, dan motivasi yang menggembirakan. Di templat perencanaan Paparan, bagian ini opsional.
+    contoh: "Dari contoh di Paparan: guru memutar video singkat sungai yang bersih dan yang tercemar, bertanya \"Bagaimana kondisi makhluk hidup pada kedua sungai tersebut?\", lalu menyampaikan tujuan pembelajaran."
+    dasar:
+      - Paparan Pembelajaran Mendalam, Langkah-Langkah Pembelajaran bagian Awal
+
+  - kunci: inti-tiga-pengalaman
+    judul: Rancang kegiatan inti yang memberi pengalaman memahami, mengaplikasi, dan merefleksi
+    penjelasan: Ketiga pengalaman belajar itu tidak harus selesai dalam satu pertemuan.
+    contoh: "Dari contoh di Paparan. Memahami: murid membaca artikel dan membuat peta konsep tentang ekosistem. Mengaplikasi: murid mengunjungi sungai, mewawancarai warga, lalu merancang proyek pengelolaan sampah di sekolah. Merefleksi: murid menulis jurnal refleksi dan menilai sendiri ketercapaian tujuannya."
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 7 ayat 1 dan Pasal 10
+      - Paparan Pembelajaran Mendalam, Langkah-Langkah Pembelajaran bagian Inti
+
+  - kunci: tiga-prinsip
+    judul: Terapkan prinsip berkesadaran, bermakna, dan menggembirakan di setiap langkah
+    penjelasan: Berkesadaran berarti murid memahami tujuan belajarnya. Bermakna berarti murid menerapkan yang dipelajari dalam kehidupan nyata. Menggembirakan berarti suasananya positif, menantang, menyenangkan, dan memotivasi.
+    catatan: Di templat perencanaan, setiap kegiatan diberi keterangan prinsip yang dipakai, misalnya "berkesadaran, bermakna".
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 3 dan Pasal 7 ayat 2
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, C.1 Perencanaan Pembelajaran
+      - Paparan Pembelajaran Mendalam, Langkah-Langkah Pembelajaran
+
+  - kunci: kegiatan-penutup
+    judul: Tutup dengan umpan balik, simpulan, dan rencana berikutnya
+    penjelasan: Beri umpan balik yang konstruktif, simpulkan pembelajaran bersama murid, dan ajak murid merencanakan pembelajaran selanjutnya.
+    contoh: "Dari contoh di Paparan: guru dan murid menyimpulkan pembelajaran, lalu guru mengajak murid merencanakan pembelajaran berikutnya, misalnya topik, mitra yang akan diundang, atau eksperimen yang akan dilakukan. Guru juga menghargai pencapaian proyek murid."
+    dasar:
+      - Paparan Pembelajaran Mendalam, Langkah-Langkah Pembelajaran bagian Penutup
+
+  - kunci: pertanyaan-reflektif
+    judul: Uji rancanganmu dengan pertanyaan reflektif
+    penjelasan: Sebelum dipakai, periksa apakah rancanganmu menjawab kebutuhan murid.
+    catatan: "Beberapa pertanyaan reflektif di Panduan, diringkas: Bagaimana saya membantu setiap murid memahami pembelajaran? Bagaimana saya menyesuaikan langkah dan materi dengan kebutuhan tiap murid? Bagaimana murid menunjukkan pemahamannya dan menilai dirinya sendiri?"
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, C.1 Perencanaan Pembelajaran, pertanyaan reflektif

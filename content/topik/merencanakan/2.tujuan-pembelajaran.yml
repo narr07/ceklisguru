@@ -1,0 +1,46 @@
+kunci: tujuan-pembelajaran
+slug: tujuan-pembelajaran
+tahap: merencanakan
+judul: Tujuan pembelajaran
+ringkasan: Tujuan pembelajaran dikembangkan dari capaian pembelajaran (CP) dan perlu dicapai murid sampai akhir fase.
+ikon: 050-target.svg
+terkait: [alur-tujuan-pembelajaran, merencanakan-asesmen]
+butir:
+  - kunci: dari-cp
+    judul: Kembangkan tujuan dari capaian pembelajaran
+    penjelasan: Setelah memahami CP fase yang kamu ampu, rumuskan tujuan-tujuan yang perlu dicapai murid sampai akhir fase.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, B.1 Merumuskan Tujuan Pembelajaran
+
+  - kunci: kompetensi-lingkup-materi
+    judul: Tulis dua komponen, yaitu kompetensi dan lingkup materi
+    penjelasan: Kompetensi adalah kesatuan pengetahuan, keterampilan, dan sikap yang ditunjukkan murid. Lingkup materi adalah konten dan konsep utama yang perlu dipahami di akhir satu unit pembelajaran.
+    contoh: "Contoh di Panduan untuk Bahasa Indonesia Fase C: \"Murid mampu menulis laporan hasil pengamatan dan wawancara.\" Kompetensinya menulis laporan, lingkup materinya laporan hasil pengamatan dan wawancara."
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 6 ayat 1
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, B.1 Merumuskan Tujuan Pembelajaran dan contoh Kriteria Ketercapaian Tujuan Pembelajaran
+
+  - kunci: kata-kerja-operasional
+    judul: Pakai kata kerja operasional yang mendorong murid berpikir lebih mendalam
+    penjelasan: Kata kerjanya harus relevan dengan kompetensi yang dituju dan bisa diamati.
+    catatan: Panduan membebaskan guru memakai teori atau pendekatan lain untuk merancang tujuan, selama relevan dengan mata pelajaran, karakteristik murid, dan konteks lingkungan belajar.
+    contoh: "Salah satu tujuan di contoh Paparan Pembelajaran Mendalam: murid mampu mengidentifikasi dampak aktivitas manusia terhadap keseimbangan ekosistem."
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, B.1 dan C.1 Perencanaan Pembelajaran
+      - Paparan Pembelajaran Mendalam, Desain Pembelajaran bagian Tujuan Pembelajaran
+
+  - kunci: acuan-standar-dan-murid
+    judul: Sesuaikan tujuan dengan standar, murid, dan sekolahmu
+    penjelasan: Tujuan mengacu pada standar kompetensi lulusan dan standar isi, dengan mempertimbangkan karakteristik murid dan sumber daya sekolah.
+    contoh: "Dari contoh di Paparan: murid punya pengetahuan dasar yang beragam tentang isu lingkungan dan minatnya tinggi pada kegiatan berbasis proyek, jadi tujuannya diarahkan ke proyek nyata di sekitar Sungai Ciliwung."
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 6 ayat 2
+      - Permendikdasmen 10/2025 (Standar Kompetensi Lulusan) Pasal 4
+      - Permendikdasmen 12/2025 (Standar Isi) Pasal 1 dan Pasal 2
+      - Paparan Pembelajaran Mendalam, Identifikasi Peserta Didik
+
+  - kunci: waktu-dan-kedalaman
+    judul: Pertimbangkan waktu yang tersedia dan kedalaman tujuannya
+    penjelasan: Pastikan setiap tujuan bisa dicapai murid dengan mendalam dalam waktu belajar yang ada.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Catatan untuk Perumusan Tujuan Pembelajaran

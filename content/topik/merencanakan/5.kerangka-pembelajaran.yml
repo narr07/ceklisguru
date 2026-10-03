@@ -1,0 +1,48 @@
+kunci: kerangka-pembelajaran
+slug: kerangka-pembelajaran
+tahap: merencanakan
+judul: Kerangka pembelajaran
+ringkasan: Pembelajaran mengikuti empat kerangka, yaitu praktik pedagogis, kemitraan pembelajaran, lingkungan pembelajaran, dan pemanfaatan teknologi.
+ikon: 024-canvas.svg
+terkait: [langkah-pembelajaran, tujuan-pembelajaran]
+butir:
+  - kunci: praktik-pedagogis
+    judul: Pilih strategi pembelajaran yang memberi pengalaman belajar mendalam
+    penjelasan: Misalnya pembelajaran berbasis masalah, berbasis projek, inkuiri, atau kontekstual. Strategi dan penilaiannya berfokus pada pengalaman memahami, mengaplikasi, dan merefleksi.
+    contoh: "Dari contoh di Paparan: pembelajaran berbasis proyek, dengan diskusi kelompok, eksplorasi lapangan, wawancara, dan presentasi."
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 12 ayat 1 huruf a dan ayat 2
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, C.1 Perencanaan Pembelajaran
+      - Paparan Pembelajaran Mendalam, Praktik Pedagogis
+
+  - kunci: kemitraan
+    judul: Rencanakan kemitraan pembelajaran
+    penjelasan: Bangun kerja sama dengan guru lain, murid lintas kelas, orang tua, komunitas, tokoh masyarakat, atau dunia kerja.
+    contoh: "Dari contoh di Paparan: Komunitas Peduli Ciliwung, pengelola bank sampah Sungai Ciliwung, dan masyarakat sekitar sungai."
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 12 ayat 1 huruf b dan ayat 3
+      - Paparan Pembelajaran Mendalam, Kemitraan Pembelajaran
+
+  - kunci: lingkungan
+    judul: Rancang lingkungan belajar yang aman, nyaman, dan inklusif
+    penjelasan: Lingkungan mencakup ruang fisik, ruang virtual, dan budaya belajar yang saling memuliakan.
+    contoh: "Contoh di templat perencanaan Paparan: memberi kesempatan murid menyampaikan pendapat di kelas dan di forum diskusi daring."
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 12 ayat 1 huruf c dan ayat 4
+      - Paparan Pembelajaran Mendalam, Lingkungan Pembelajaran
+
+  - kunci: teknologi
+    judul: Manfaatkan teknologi untuk pembelajaran yang interaktif, kolaboratif, dan kontekstual
+    penjelasan: Teknologinya boleh digital maupun nondigital. Pemanfaatan teknologi digital sifatnya opsional.
+    contoh: "Dari contoh di Paparan: LMS saat perencanaan, pertemuan daring, video, dan perpustakaan daring saat pelaksanaan, serta asesmen daring."
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 12 ayat 1 huruf d dan ayat 5
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, C.1 Perencanaan Pembelajaran
+      - Paparan Pembelajaran Mendalam, Pemanfaatan Digital
+
+  - kunci: lintas-disiplin
+    judul: Pertimbangkan kegiatan lintas disiplin
+    penjelasan: Lewat projek, STEM, inkuiri, atau pembelajaran berbasis masalah, murid melihat keterkaitan konsep dari berbagai bidang dan memakainya untuk menyelesaikan persoalan nyata.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, C.1 Perencanaan Pembelajaran
+      - Paparan Pembelajaran Mendalam, Desain Pembelajaran bagian Lintas Disiplin Ilmu

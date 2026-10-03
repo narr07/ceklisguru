@@ -4,5 +4,11 @@ export default defineAppConfig({
       primary: 'yellow',
       neutral: 'zinc',
     },
+    // The active crumb is text; primary colors like yellow fail AA on white
+    breadcrumb: {
+      defaultVariants: {
+        color: 'neutral',
+      },
+    },
   },
 })

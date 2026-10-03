@@ -21,3 +21,12 @@ html {
   --icon-surface: var(--ui-bg);
   fill: var(--ui-text-highlighted);
 }
+
+/* Secondary text one step darker than Nuxt UI's default: neutral-500 read too faint for long paragraphs */
+:root {
+  --ui-text-muted: var(--ui-color-neutral-600);
+}
+
+.dark {
+  --ui-text-muted: var(--ui-color-neutral-300);
+}

@@ -17,12 +17,22 @@ const checked = computed({
   get: () => store.isChecked(props.topik, props.butir.kunci),
   set: value => store.setChecked(props.topik, props.butir.kunci, value === true),
 })
+
+// Clicking anywhere on the card ticks it. The checkbox, its label, and the example
+// button handle their own clicks, and selecting text should not tick anything
+function onCardClick(event: MouseEvent) {
+  const target = event.target as HTMLElement
+  if (target.closest('button, a, label')) return
+  if (window.getSelection()?.toString()) return
+  checked.value = !checked.value
+}
 </script>
 
 <template>
   <li
-    class="rounded-2xl border p-4 transition-colors sm:p-5"
-    :class="checked ? 'border-primary/40 bg-primary/5' : 'border-default bg-default'"
+    class="cursor-pointer rounded-2xl border p-4 transition-colors sm:p-5"
+    :class="checked ? 'border-primary/40 bg-primary/5' : 'border-default bg-default hover:border-accented'"
+    @click="onCardClick"
   >
     <UCheckbox
       :id="`butir-${butir.kunci}`"

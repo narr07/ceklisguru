@@ -1,0 +1,45 @@
+kunci: merencanakan-asesmen
+slug: merencanakan-asesmen
+tahap: merencanakan
+judul: Merencanakan asesmen
+ringkasan: Rencanakan asesmen bersama rencana pembelajaran, karena keduanya satu kesatuan. Asesmen awal dipakai untuk melihat kesiapan murid sebelum belajar.
+ikon: 018-clipboard.svg
+terkait: [tujuan-pembelajaran, langkah-pembelajaran]
+butir:
+  - kunci: bukti-dulu
+    judul: Tentukan bukti ketercapaian sebelum menyusun kegiatan
+    penjelasan: Pahami tujuannya, tentukan asesmen yang bisa membuktikan murid sudah mencapainya, baru rancang kegiatan belajarnya.
+    catatan: Panduan menawarkan cara ini, yang disebut backward design, sebagai salah satu pilihan saat menyusun RPP atau modul ajar.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, C.1 Perencanaan Pembelajaran, Gambar 3.4
+
+  - kunci: tujuan-asesmen
+    judul: Mulai dari tujuan asesmen
+    penjelasan: Tentukan dulu apakah asesmen itu untuk memantau proses belajar atau untuk mengukur ketercapaian tujuan pembelajaran.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, C.2 Perencanaan Asesmen
+
+  - kunci: pilih-instrumen
+    judul: Pilih teknik dan instrumen yang sesuai dengan murid dan tujuan
+    penjelasan: Perhatikan karakteristik murid, kesesuaian dengan tujuan pembelajaran dan tujuan asesmen, serta kemudahan instrumen untuk memberi umpan balik.
+    catatan: Contoh teknik di Paparan Pembelajaran Mendalam antara lain penilaian diri, penilaian sejawat, observasi, portofolio, penilaian proyek, penilaian produk, tes tertulis, dan tes lisan.
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 8 ayat 1
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, C.2 Perencanaan Asesmen
+      - Paparan Pembelajaran Mendalam, Asesmen Pembelajaran
+
+  - kunci: awal-proses-akhir
+    judul: Rencanakan asesmen di awal, selama, dan di akhir pembelajaran
+    penjelasan: Asesmen awal sebelum pembelajaran dipakai untuk melihat kesiapan murid dan menyesuaikan rencanamu, bukan untuk nilai rapor.
+    contoh: "Contoh asesmen formatif di Panduan: guru membuka pertemuan dengan pertanyaan tentang topik pertemuan sebelumnya. Di akhir kegiatan, murid menulis 3 hal yang baru dipelajari, 2 hal yang ingin didalami, dan 1 hal yang belum dipahami."
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, C.1 Perencanaan Pembelajaran dan C.2 Asesmen Formatif
+      - Paparan Pembelajaran Mendalam, Perencanaan bagian Asesmen
+
+  - kunci: kriteria-ketercapaian
+    judul: Tetapkan kriteria ketercapaian tujuan pembelajaran
+    penjelasan: Kriteria menjelaskan kompetensi yang perlu ditunjukkan murid sebagai bukti tujuan sudah tercapai. Tetapkan saat menyusun RPP atau modul ajar.
+    catatan: "Pendekatan yang ditawarkan Panduan: deskripsi kriteria, rubrik, skala atau interval nilai, dan persentase."
+    contoh: "Contoh deskripsi kriteria di Panduan untuk tujuan menulis laporan: laporan murid menunjukkan kemampuan menulis teks eksplanasi, hasil pengamatan, dan pengalaman secara jelas, serta menjelaskan hubungan sebab-akibat dengan argumen yang logis."
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Kriteria Ketercapaian Tujuan Pembelajaran dan Tabel 3.4
