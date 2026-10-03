@@ -1,0 +1,32 @@
+kunci: mengolah-hasil-asesmen
+slug: mengolah-hasil-asesmen
+tahap: menilai
+judul: Mengolah hasil asesmen
+ringkasan: Hasil asesmen diolah secara kuantitatif dan/atau kualitatif dengan membandingkan capaian murid terhadap kriteria ketercapaian tujuan pembelajaran.
+ikon: 035-folder.svg
+terkait: [merencanakan-asesmen, melaporkan-hasil-belajar]
+butir:
+  - kunci: pisahkan-formatif-sumatif
+    judul: Jangan gabungkan hasil asesmen formatif dan sumatif
+    penjelasan: Keduanya punya fungsi berbeda. Asesmen formatif memberi umpan balik pada proses, jadi tidak ikut menentukan nilai akhir.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Bab Pengolahan dan Pelaporan Hasil Asesmen, Ringkasan Bab
+
+  - kunci: bandingkan-kriteria
+    judul: Bandingkan capaian murid dengan kriteria ketercapaian
+    penjelasan: Olah hasil asesmen untuk setiap tujuan pembelajaran menjadi capaian tiap murid.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, A. Pengolahan Hasil Asesmen
+
+  - kunci: kualitatif-kuantitatif
+    judul: Pilih cara mengolah data yang sesuai
+    penjelasan: Data bisa kualitatif, seperti hasil amatan atau rubrik, atau kuantitatif berupa angka. Data angka boleh diolah dengan rerata atau secara proporsional.
+    contoh: "Contoh di Panduan untuk IPAS Fase C, tujuan menyelidiki ragam sumber energi: hasil murid dipetakan ke empat kualitas, yaitu perlu bimbingan, cukup, baik, dan sangat baik. Misalnya Amar menguraikan 2 manfaat sumber energi (baik) dan menjelaskan 1 sumber energi alternatif (cukup)."
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, A.1 Mengolah hasil asesmen, Tabel 5.1 dan 5.2
+
+  - kunci: tentukan-batas-tercapai
+    judul: Tentukan kualitas yang dianggap sudah mencapai tujuan
+    penjelasan: Kamu yang menetapkan batasnya, misalnya murid dianggap mencapai tujuan mulai dari kualitas "cukup".
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, A.1 Mengolah hasil asesmen

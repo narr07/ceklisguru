@@ -1,0 +1,37 @@
+kunci: umpan-balik-dan-tindak-lanjut
+slug: umpan-balik-dan-tindak-lanjut
+tahap: menilai
+judul: Umpan balik dan tindak lanjut
+ringkasan: Hasil asesmen dipakai sebagai umpan balik bagi guru, murid, dan orang tua untuk memperbaiki proses dan hasil belajar.
+ikon: 032-feedback.svg
+terkait: [melaksanakan-asesmen, melaporkan-hasil-belajar]
+butir:
+  - kunci: kekuatan-dan-perbaikan
+    judul: Tunjukkan kekuatan murid dan hal yang masih perlu ditingkatkan
+    penjelasan: Sertakan cara memperbaiki tulisan, karya, atau penampilannya, supaya hasil asesmen tidak sekadar angka.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, C.2 Asesmen Formatif
+
+  - kunci: kalimat-dukungan
+    judul: Pakai kalimat dukungan yang menumbuhkan pola pikir bertumbuh
+    penjelasan: Beri umpan balik secara berkala, dengan kalimat yang membangun dan mendorong murid terus belajar.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Contoh Pelaksanaan Prinsip Asesmen Edukatif huruf e
+
+  - kunci: analisis-tindak-lanjut
+    judul: Analisis, refleksikan, dan tindak lanjuti hasil asesmen
+    penjelasan: Kalau murid sudah mencapai tujuan, lanjutkan ke tujuan berikutnya. Kalau belum, beri tindak lanjut sampai tujuannya tercapai.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Contoh Pelaksanaan Prinsip Asesmen Objektif huruf d dan C.3 Asesmen Pembelajaran
+
+  - kunci: diskusikan-hasil
+    judul: Diskusikan hasil asesmen untuk melihat yang sudah baik dan yang perlu diperbaiki
+    penjelasan: Hasil asesmen menjadi bahan refleksi bagi murid, guru, dan orang tua.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Contoh Pelaksanaan Prinsip Asesmen Edukatif huruf d
+
+  - kunci: bersama-orang-tua
+    judul: Bicarakan tindak lanjutnya bersama orang tua
+    penjelasan: Libatkan orang tua dalam menentukan langkah berikutnya untuk mendukung belajar murid.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Contoh Pelaksanaan Prinsip Asesmen Edukatif huruf e

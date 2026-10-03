@@ -1,0 +1,37 @@
+kunci: prinsip-asesmen
+slug: prinsip-asesmen
+tahap: menilai
+judul: Prinsip asesmen
+ringkasan: Asesmen dilakukan secara berkeadilan, objektif, dan edukatif, supaya mencerminkan pencapaian belajar murid secara utuh.
+ikon: 032-rating.svg
+terkait: [melaksanakan-asesmen, merencanakan-asesmen]
+butir:
+  - kunci: tanpa-bias
+    judul: Nilai murid tanpa bias
+    penjelasan: Asesmen tidak dipengaruhi oleh latar belakang, identitas, atau kebutuhan khusus murid.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Prinsip Asesmen Berkeadilan
+
+  - kunci: akomodasi-asesmen
+    judul: Beri akomodasi asesmen bagi murid berkebutuhan khusus
+    penjelasan: Sesuaikan bentuk soal atau instrumen, format jawaban, tempat atau suasana, dan lama waktunya.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Contoh Pelaksanaan Prinsip Asesmen Berkeadilan huruf b
+
+  - kunci: sampaikan-kriteria
+    judul: Sampaikan kriteria ketercapaian kepada murid
+    penjelasan: Dengan begitu murid memahami apa yang diharapkan dari mereka.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Contoh Pelaksanaan Prinsip Asesmen Berkeadilan huruf d
+
+  - kunci: faktual-konsisten
+    judul: Nilai berdasarkan fakta dan kriteria yang jelas
+    penjelasan: Asesmen dilakukan secara konsisten, berdasarkan informasi faktual dan kriteria yang disepakati, bukan persepsi pribadi.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Prinsip Asesmen Objektif
+
+  - kunci: rancang-bersama-rekan
+    judul: Rancang asesmen bersama rekan guru
+    penjelasan: Dengan merancang bersama, kalian bisa memakai kriteria yang serupa dan sesuai dengan tujuan asesmen.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Contoh Pelaksanaan Prinsip Asesmen Berkeadilan huruf e

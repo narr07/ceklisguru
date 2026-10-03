@@ -1,0 +1,38 @@
+kunci: melaporkan-hasil-belajar
+slug: melaporkan-hasil-belajar
+tahap: menilai
+judul: Melaporkan hasil belajar
+ringkasan: Hasil asesmen dilaporkan dalam rapor yang sederhana dan informatif, paling sedikit di setiap akhir semester.
+ikon: 052-letter.svg
+terkait: [mengolah-hasil-asesmen, umpan-balik-dan-tindak-lanjut]
+butir:
+  - kunci: rapor-tiap-semester
+    judul: Laporkan pencapaian hasil belajar lewat rapor setiap akhir semester
+    penjelasan: Rapor paling sedikit memuat informasi pencapaian hasil belajar murid.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, B. Pelaporan Hasil Belajar
+
+  - kunci: sederhana-informatif
+    judul: Buat laporan yang sederhana dan informatif
+    penjelasan: Utamakan informasi yang paling penting dipahami murid dan orang tua, termasuk capaian kompetensi dan strategi tindak lanjutnya.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, B. Pelaporan Hasil Belajar dan Contoh Pelaksanaan Prinsip Asesmen Edukatif huruf c
+
+  - kunci: deskripsi-positif
+    judul: Tulis deskripsi capaian dengan kalimat positif dan memotivasi
+    penjelasan: Deskripsi berisi kompetensi yang sudah dicapai dan yang perlu ditingkatkan, berdasarkan tujuan pembelajaran di tiap mata pelajaran.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, B. Pelaporan Hasil Belajar, Catatan nomor 2
+
+  - kunci: komunikasi-berkala
+    judul: Sampaikan kemajuan murid kepada orang tua sepanjang tahun
+    penjelasan: Tidak perlu menunggu rapor. Hal yang mendesak bisa disampaikan sebelum masa pembagian rapor.
+    catatan: Panduan menyebut hal ini di bagian rapor Fase A, untuk menjalin kerja sama dengan orang tua.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, B. Pelaporan Hasil Belajar bagian rapor Fase A
+
+  - kunci: bentuk-laporan-lain
+    judul: Pertimbangkan bentuk laporan lain selain rapor
+    penjelasan: Sekolah dapat menambahkan portofolio, diskusi atau konferensi, pameran karya, atau skill passport.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, B. Pelaporan Hasil Belajar

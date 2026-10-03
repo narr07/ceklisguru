@@ -1,0 +1,39 @@
+kunci: melaksanakan-asesmen
+slug: melaksanakan-asesmen
+tahap: menilai
+judul: Melaksanakan asesmen
+ringkasan: Asesmen formatif dipakai untuk memperbaiki proses belajar, sedangkan asesmen sumatif untuk menilai pencapaian hasil belajar.
+ikon: 029-resume.svg
+terkait: [prinsip-asesmen, umpan-balik-dan-tindak-lanjut, diferensiasi-dan-asesmen-formatif]
+butir:
+  - kunci: formatif-bukan-rapor
+    judul: Jangan pakai asesmen formatif untuk nilai rapor
+    penjelasan: Asesmen formatif dirancang untuk belajar, bukan untuk menentukan nilai rapor, kenaikan kelas, atau kelulusan.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, C.2 Asesmen Formatif
+
+  - kunci: teknik-beragam
+    judul: Pakai teknik asesmen yang beragam, tidak hanya tes
+    penjelasan: Selain tes tertulis atau lisan, gunakan observasi berkala dan asesmen performa seperti praktik, produk, projek, dan portofolio.
+    dasar:
+      - Permendikdasmen 1/2026 Pasal 8 ayat 1
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Contoh Pelaksanaan Prinsip Asesmen Objektif huruf e
+
+  - kunci: libatkan-murid
+    judul: Libatkan murid dalam asesmen
+    penjelasan: Ajak murid melakukan penilaian diri, penilaian antarteman, refleksi diri, dan memberi umpan balik kepada teman, dengan rambu-rambu yang jelas.
+    contoh: "Contoh di Panduan: berdasarkan rubrik yang sudah disepakati, murid melihat hasil kerjanya sendiri, lalu menandai bagian mana yang sudah dan belum sesuai rubrik."
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Contoh Pelaksanaan Prinsip Asesmen Edukatif huruf b dan Contoh pelaksanaan asesmen formatif
+
+  - kunci: sumatif-periodik
+    judul: Lakukan asesmen sumatif setelah satu atau lebih tujuan pembelajaran
+    penjelasan: Asesmen di akhir semester sifatnya pilihan. Kalau data selama semester sudah cukup, asesmen akhir semester tidak perlu dilakukan.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, C.2 Asesmen Sumatif
+
+  - kunci: bagi-sumatif
+    judul: Bagi asesmen sumatif ke beberapa kegiatan
+    penjelasan: Supaya murid bisa mengerjakannya dalam kondisi yang baik, tidak terburu-buru dan tidak terlalu padat. Nilai akhirnya gabungan dari kegiatan-kegiatan itu.
+    dasar:
+      - Panduan Pembelajaran dan Asesmen edisi revisi 2025, Bab Pengolahan dan Pelaporan Hasil Asesmen, Ringkasan Bab
