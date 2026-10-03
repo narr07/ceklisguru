@@ -24,9 +24,20 @@ html {
 
 /* Secondary text one step darker than Nuxt UI's default: neutral-500 read too faint for long paragraphs */
 :root {
-  --ui-text-muted: var(--ui-color-neutral-600);
+  --ui-text-muted: var(--ui-color-neutral-700);
 }
 
 .dark {
   --ui-text-muted: var(--ui-color-neutral-300);
+}
+
+/* Selected text follows the chosen primary color; light shades keep dark text readable */
+::selection {
+  background-color: var(--ui-color-primary-200);
+  color: var(--ui-color-neutral-900);
+}
+
+.dark ::selection {
+  background-color: var(--ui-color-primary-300);
+  color: var(--ui-color-neutral-950);
 }
